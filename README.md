@@ -29,7 +29,7 @@ The Log folder contains the log files where the information about the experiment
 - elliptic: A preprocessed version of https://www.kaggle.com/ellipticco/elliptic-data-set
 
 **Note**:\
-The Elliptic dataset is used for Node Classification task, so this dataset is contained in Elliptic folder inside EvolveGCN_DGL.\ 
+The Elliptic dataset is used for Node Classification task, so this dataset is contained in Elliptic folder inside EvolveGCN_DGL. 
 On the other hand, EvolveGCN contains 5 datasets: SBM, BC-OTC, BC-Alpha, Autonomous Systems and Reddit hyperlink network. The dataset UC_irvine is not downloadable anymore. Downloaded data sets are placed in the 'data' folder.\
 Because some datasets are to large, we have compressed them into .rar file.
 
@@ -45,7 +45,7 @@ Because some datasets are to large, we have compressed them into .rar file.
 
 
 ## Set up with Docker
-There are clear instructions in the official Github repository for Docker set up to reproduce the experiments: [EvolveGCN official repo](https://github.com/IBM/EvolveGCN)
+There are clear instructions in the official Github repository for Docker set up to reproduce the experiments: [EvolveGCN official repository](https://github.com/IBM/EvolveGCN)
 
 ## Usage
 
