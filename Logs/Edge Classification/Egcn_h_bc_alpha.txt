@@ -1,0 +1,1509 @@
+use CUDA: True - device: cuda
+MPI backend not preset. Set process rank to 0 (out of 1)
+/content/drive/MyDrive/EvolveGCN/bitcoin_dl.py:47: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:621.)
+  neg_sp_edges = torch.sparse.LongTensor(neg_sp_indices
+/content/drive/MyDrive/EvolveGCN/taskers_utils.py:98: UserWarning: torch.sparse.SparseTensor(indices, values, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, dtype=, device=). (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:609.)
+  out = torch.sparse.FloatTensor(idx.t(),vals).coalesce()
+Dataset splits sizes:  train 85 dev 13 test 29
+CLS num_feats 200
+Log: STDOUT
+INFO:root:*** PARAMETERS ***
+INFO:root:{'adj_mat_time_window': 1,
+ 'bitcoin_args': <utils.Namespace object at 0x7b90f6764d00>,
+ 'bitcoinalpha_args': {'aggr_time': 1200000,
+                       'edges_file': 'soc-sign-bitcoinalpha.csv',
+                       'feats_per_node': 3,
+                       'folder': './data/'},
+ 'class_weights': [0.8, 0.2],
+ 'comments': ['comments'],
+ 'data': 'bitcoinalpha',
+ 'data_loading_params': {'batch_size': 1, 'num_workers': 0},
+ 'dev_proportion': 0.1,
+ 'device': 'cuda',
+ 'early_stop_patience': 100,
+ 'eval_after_epochs': 3,
+ 'gcn_parameters': {'cls_feats': 200,
+                    'cls_feats_max': 500,
+                    'cls_feats_min': 50,
+                    'feats_per_node': 100,
+                    'feats_per_node_max': 256,
+                    'feats_per_node_min': 50,
+                    'k_top_grcu': 200,
+                    'layer_1_feats': 100,
+                    'layer_1_feats_max': 200,
+                    'layer_1_feats_min': 20,
+                    'layer_2_feats': 100,
+                    'layer_2_feats_same_as_l1': True,
+                    'lstm_l1_feats': 100,
+                    'lstm_l1_feats_max': 200,
+                    'lstm_l1_feats_min': 20,
+                    'lstm_l1_layers': 1,
+                    'lstm_l2_feats': 100,
+                    'lstm_l2_feats_same_as_l1': True,
+                    'lstm_l2_layers': 1,
+                    'num_layers': 2},
+ 'learning_rate': 0.001,
+ 'learning_rate_max': 0.1,
+ 'learning_rate_min': 0.0001,
+ 'model': 'egcn_h',
+ 'negative_mult_test': 100,
+ 'negative_mult_training': 20,
+ 'num_epochs': 10,
+ 'num_hist_steps': 10,
+ 'num_hist_steps_max': 10,
+ 'num_hist_steps_min': 3,
+ 'rank': 0,
+ 'save_node_embeddings': False,
+ 'seed': 1234,
+ 'smart_neg_sampling': True,
+ 'steps_accum_gradients': 1,
+ 'target_class': 0,
+ 'target_measure': 'F1',
+ 'task': 'edge_cls',
+ 'train_proportion': 0.7,
+ 'use_1_hot_node_feats': True,
+ 'use_2_hot_node_feats': False,
+ 'use_cuda': True,
+ 'use_logfile': False,
+ 'wsize': 1}
+INFO:root:
+INFO:root:################ TRAIN epoch 0 ###################
+INFO:root:TRAIN mean losses tensor(0.1600, device='cuda:0')
+INFO:root:TRAIN mean errors 0.2092631608247757
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.9244865719755135
+INFO:root:TRAIN tp {0: tensor(61, device='cuda:0'), 1: tensor(22475, device='cuda:0')},fn {0: tensor(2423, device='cuda:0'), 1: tensor(3541, device='cuda:0')},fp {0: tensor(3541, device='cuda:0'), 1: tensor(2423, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.7907 - recall 0.7907 - f1 0.7907 
+INFO:root:TRAIN measures for class 0 - precision 0.0169 - recall 0.0246 - f1 0.0200 
+INFO:root:TRAIN measures for class 1 - precision 0.9027 - recall 0.8639 - f1 0.8829 
+INFO:root:TRAIN measures@10 microavg - precision 0.8651 - recall 0.0261 - f1 0.0507 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0167 - recall 0.0004 - f1 0.0008 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9287 - recall 0.0286 - f1 0.0554 
+INFO:root:TRAIN measures@100 microavg - precision 0.8469 - recall 0.2554 - f1 0.3925 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0151 - recall 0.0036 - f1 0.0058 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9087 - recall 0.2794 - f1 0.4274 
+INFO:root:TRAIN measures@1000 microavg - precision 0.7944 - recall 0.7707 - f1 0.7823 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0180 - recall 0.0242 - f1 0.0206 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9011 - recall 0.8419 - f1 0.8705 
+INFO:root:TRAIN Total epoch time: 12.276921802999993
+INFO:root:################ TRAIN epoch 1 ###################
+INFO:root:TRAIN mean losses tensor(0.1617, device='cuda:0')
+INFO:root:TRAIN mean errors 0.08715789765119553
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.9350022128449011
+INFO:root:TRAIN tp {0: tensor(0, device='cuda:0'), 1: tensor(26016, device='cuda:0')},fn {0: tensor(2484, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2484, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9128 - recall 0.9128 - f1 0.9128 
+INFO:root:TRAIN measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures for class 1 - precision 0.9128 - recall 1.0000 - f1 0.9544 
+INFO:root:TRAIN measures@10 microavg - precision 0.9635 - recall 0.0287 - f1 0.0558 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9635 - recall 0.0315 - f1 0.0610 
+INFO:root:TRAIN measures@100 microavg - precision 0.9313 - recall 0.2778 - f1 0.4279 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9313 - recall 0.3043 - f1 0.4587 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9110 - recall 0.8808 - f1 0.8956 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9110 - recall 0.9649 - f1 0.9372 
+INFO:root:TRAIN Total epoch time: 10.177776403999985
+INFO:root:################ TRAIN epoch 2 ###################
+INFO:root:TRAIN mean losses tensor(0.1559, device='cuda:0')
+INFO:root:TRAIN mean errors 0.08715789765119553
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.932245178074622
+INFO:root:TRAIN tp {0: tensor(0, device='cuda:0'), 1: tensor(26016, device='cuda:0')},fn {0: tensor(2484, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2484, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9128 - recall 0.9128 - f1 0.9128 
+INFO:root:TRAIN measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures for class 1 - precision 0.9128 - recall 1.0000 - f1 0.9544 
+INFO:root:TRAIN measures@10 microavg - precision 0.9600 - recall 0.0286 - f1 0.0556 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9600 - recall 0.0314 - f1 0.0607 
+INFO:root:TRAIN measures@100 microavg - precision 0.9272 - recall 0.2765 - f1 0.4260 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9272 - recall 0.3029 - f1 0.4567 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9109 - recall 0.8807 - f1 0.8956 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9109 - recall 0.9648 - f1 0.9371 
+INFO:root:TRAIN Total epoch time: 10.03977460599998
+INFO:root:################ TRAIN epoch 3 ###################
+INFO:root:TRAIN mean losses tensor(0.1551, device='cuda:0')
+INFO:root:TRAIN mean errors 0.08715789765119553
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.93358354715143
+INFO:root:TRAIN tp {0: tensor(0, device='cuda:0'), 1: tensor(26016, device='cuda:0')},fn {0: tensor(2484, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2484, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9128 - recall 0.9128 - f1 0.9128 
+INFO:root:TRAIN measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures for class 1 - precision 0.9128 - recall 1.0000 - f1 0.9544 
+INFO:root:TRAIN measures@10 microavg - precision 0.9553 - recall 0.0285 - f1 0.0553 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9553 - recall 0.0312 - f1 0.0604 
+INFO:root:TRAIN measures@100 microavg - precision 0.9289 - recall 0.2771 - f1 0.4268 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9289 - recall 0.3035 - f1 0.4575 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9113 - recall 0.8811 - f1 0.8960 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9113 - recall 0.9652 - f1 0.9375 
+INFO:root:TRAIN Total epoch time: 9.084509480000008
+INFO:root:################ TRAIN epoch 4 ###################
+INFO:root:TRAIN mean losses tensor(0.1537, device='cuda:0')
+INFO:root:TRAIN mean errors 0.08715789765119553
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.9332536819607209
+INFO:root:TRAIN tp {0: tensor(0, device='cuda:0'), 1: tensor(26016, device='cuda:0')},fn {0: tensor(2484, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2484, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9128 - recall 0.9128 - f1 0.9128 
+INFO:root:TRAIN measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures for class 1 - precision 0.9128 - recall 1.0000 - f1 0.9544 
+INFO:root:TRAIN measures@10 microavg - precision 0.9518 - recall 0.0284 - f1 0.0551 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9518 - recall 0.0311 - f1 0.0602 
+INFO:root:TRAIN measures@100 microavg - precision 0.9287 - recall 0.2770 - f1 0.4267 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9287 - recall 0.3034 - f1 0.4574 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9113 - recall 0.8811 - f1 0.8959 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9113 - recall 0.9652 - f1 0.9375 
+INFO:root:TRAIN Total epoch time: 10.238253296000039
+INFO:root:################ VALID epoch 4 ###################
+INFO:root:VALID mean losses tensor(0.2182, device='cuda:0')
+INFO:root:VALID mean errors 0.18522484600543976
+INFO:root:VALID mean MRR 0.0 - mean MAP 0.8399593334256156
+INFO:root:VALID tp {0: tensor(0, device='cuda:0'), 1: tensor(1522, device='cuda:0')},fn {0: tensor(346, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(346, device='cuda:0')}
+INFO:root:VALID measures microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID measures@10 microavg - precision 0.8615 - recall 0.0600 - f1 0.1121 
+INFO:root:VALID measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@10 for class 1 - precision 0.8615 - recall 0.0736 - f1 0.1356 
+INFO:root:VALID measures@100 microavg - precision 0.8367 - recall 0.5733 - f1 0.6804 
+INFO:root:VALID measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@100 for class 1 - precision 0.8367 - recall 0.7037 - f1 0.7645 
+INFO:root:VALID measures@1000 microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@1000 for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID Total epoch time: 0.8158673579999913
+INFO:root:################ TEST epoch 4 ###################
+INFO:root:TEST batch 1 / 29 - partial error 0.2444 - partial loss 0.2648 - partial MRR  0.0000 - partial MAP 0.8530
+INFO:root:TEST batch 1 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(68, device='cuda:0')},fn {0: tensor(22, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')}
+INFO:root:TEST batch 1 / 29 - measures partial microavg - precision 0.7556 - recall 0.7556 - f1 0.7556 
+INFO:root:TEST batch 1 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 1 / 29 - measures partial for class 1 - precision 0.7556 - recall 1.0000 - f1 0.8608 
+INFO:root:TEST batch 1 / 29 - Batch time 0 
+INFO:root:TEST batch 2 / 29 - partial error 0.2090 - partial loss 0.2247 - partial MRR  0.0000 - partial MAP 0.8725
+INFO:root:TEST batch 2 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(38, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 2 / 29 - measures partial microavg - precision 0.8636 - recall 0.8636 - f1 0.8636 
+INFO:root:TEST batch 2 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 2 / 29 - measures partial for class 1 - precision 0.8636 - recall 1.0000 - f1 0.9268 
+INFO:root:TEST batch 2 / 29 - Batch time 0 
+INFO:root:TEST batch 3 / 29 - partial error 0.2500 - partial loss 0.3342 - partial MRR  0.0000 - partial MAP 0.8057
+INFO:root:TEST batch 3 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')},fn {0: tensor(12, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')}
+INFO:root:TEST batch 3 / 29 - measures partial microavg - precision 0.5385 - recall 0.5385 - f1 0.5385 
+INFO:root:TEST batch 3 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 3 / 29 - measures partial for class 1 - precision 0.5385 - recall 1.0000 - f1 0.7000 
+INFO:root:TEST batch 3 / 29 - Batch time 0 
+INFO:root:TEST batch 4 / 29 - partial error 0.2323 - partial loss 0.3024 - partial MRR  0.0000 - partial MAP 0.8092
+INFO:root:TEST batch 4 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(32, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 4 / 29 - measures partial microavg - precision 0.8421 - recall 0.8421 - f1 0.8421 
+INFO:root:TEST batch 4 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 4 / 29 - measures partial for class 1 - precision 0.8421 - recall 1.0000 - f1 0.9143 
+INFO:root:TEST batch 4 / 29 - Batch time 0 
+INFO:root:TEST batch 5 / 29 - partial error 0.2202 - partial loss 0.2757 - partial MRR  0.0000 - partial MAP 0.8177
+INFO:root:TEST batch 5 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 5 / 29 - measures partial microavg - precision 0.9000 - recall 0.9000 - f1 0.9000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 1 - precision 0.9000 - recall 1.0000 - f1 0.9474 
+INFO:root:TEST batch 5 / 29 - Batch time 0 
+INFO:root:TEST batch 6 / 29 - partial error 0.2155 - partial loss 0.2576 - partial MRR  0.0000 - partial MAP 0.8280
+INFO:root:TEST batch 6 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 6 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 6 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 6 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 6 / 29 - Batch time 0 
+INFO:root:TEST batch 7 / 29 - partial error 0.2114 - partial loss 0.2496 - partial MRR  0.0000 - partial MAP 0.8302
+INFO:root:TEST batch 7 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 7 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 7 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 7 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 7 / 29 - Batch time 0 
+INFO:root:TEST batch 8 / 29 - partial error 0.1926 - partial loss 0.2290 - partial MRR  0.0000 - partial MAP 0.8453
+INFO:root:TEST batch 8 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 8 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - Batch time 0 
+INFO:root:TEST batch 9 / 29 - partial error 0.1871 - partial loss 0.2118 - partial MRR  0.0000 - partial MAP 0.8497
+INFO:root:TEST batch 9 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 9 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - Batch time 0 
+INFO:root:TEST batch 10 / 29 - partial error 0.1414 - partial loss 0.1997 - partial MRR  0.0000 - partial MAP 0.8895
+INFO:root:TEST batch 10 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(102, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 10 / 29 - measures partial microavg - precision 0.9808 - recall 0.9808 - f1 0.9808 
+INFO:root:TEST batch 10 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 10 / 29 - measures partial for class 1 - precision 0.9808 - recall 1.0000 - f1 0.9903 
+INFO:root:TEST batch 10 / 29 - Batch time 0 
+INFO:root:TEST batch 11 / 29 - partial error 0.1381 - partial loss 0.1965 - partial MRR  0.0000 - partial MAP 0.8954
+INFO:root:TEST batch 11 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(34, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 11 / 29 - measures partial microavg - precision 0.8947 - recall 0.8947 - f1 0.8947 
+INFO:root:TEST batch 11 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 11 / 29 - measures partial for class 1 - precision 0.8947 - recall 1.0000 - f1 0.9444 
+INFO:root:TEST batch 11 / 29 - Batch time 0 
+INFO:root:TEST batch 12 / 29 - partial error 0.1447 - partial loss 0.1995 - partial MRR  0.0000 - partial MAP 0.8955
+INFO:root:TEST batch 12 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(40, device='cuda:0')},fn {0: tensor(10, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')}
+INFO:root:TEST batch 12 / 29 - measures partial microavg - precision 0.8000 - recall 0.8000 - f1 0.8000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 1 - precision 0.8000 - recall 1.0000 - f1 0.8889 
+INFO:root:TEST batch 12 / 29 - Batch time 0 
+INFO:root:TEST batch 13 / 29 - partial error 0.1494 - partial loss 0.2106 - partial MRR  0.0000 - partial MAP 0.8879
+INFO:root:TEST batch 13 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 13 / 29 - measures partial microavg - precision 0.6667 - recall 0.6667 - f1 0.6667 
+INFO:root:TEST batch 13 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 13 / 29 - measures partial for class 1 - precision 0.6667 - recall 1.0000 - f1 0.8000 
+INFO:root:TEST batch 13 / 29 - Batch time 0 
+INFO:root:TEST batch 14 / 29 - partial error 0.1423 - partial loss 0.2042 - partial MRR  0.0000 - partial MAP 0.8960
+INFO:root:TEST batch 14 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(36, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 14 / 29 - measures partial microavg - precision 0.9474 - recall 0.9474 - f1 0.9474 
+INFO:root:TEST batch 14 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 14 / 29 - measures partial for class 1 - precision 0.9474 - recall 1.0000 - f1 0.9730 
+INFO:root:TEST batch 14 / 29 - Batch time 0 
+INFO:root:TEST batch 15 / 29 - partial error 0.1350 - partial loss 0.1961 - partial MRR  0.0000 - partial MAP 0.9013
+INFO:root:TEST batch 15 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 15 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - Batch time 0 
+INFO:root:TEST batch 16 / 29 - partial error 0.1294 - partial loss 0.1893 - partial MRR  0.0000 - partial MAP 0.9054
+INFO:root:TEST batch 16 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 16 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - Batch time 0 
+INFO:root:TEST batch 17 / 29 - partial error 0.1279 - partial loss 0.1877 - partial MRR  0.0000 - partial MAP 0.9043
+INFO:root:TEST batch 17 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 17 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 17 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 17 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 17 / 29 - Batch time 0 
+INFO:root:TEST batch 18 / 29 - partial error 0.1296 - partial loss 0.1926 - partial MRR  0.0000 - partial MAP 0.9050
+INFO:root:TEST batch 18 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 18 / 29 - measures partial microavg - precision 0.7500 - recall 0.7500 - f1 0.7500 
+INFO:root:TEST batch 18 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 18 / 29 - measures partial for class 1 - precision 0.7500 - recall 1.0000 - f1 0.8571 
+INFO:root:TEST batch 18 / 29 - Batch time 0 
+INFO:root:TEST batch 19 / 29 - partial error 0.1274 - partial loss 0.1895 - partial MRR  0.0000 - partial MAP 0.9087
+INFO:root:TEST batch 19 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 19 / 29 - measures partial microavg - precision 0.9231 - recall 0.9231 - f1 0.9231 
+INFO:root:TEST batch 19 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 19 / 29 - measures partial for class 1 - precision 0.9231 - recall 1.0000 - f1 0.9600 
+INFO:root:TEST batch 19 / 29 - Batch time 0 
+INFO:root:TEST batch 20 / 29 - partial error 0.1262 - partial loss 0.1882 - partial MRR  0.0000 - partial MAP 0.9076
+INFO:root:TEST batch 20 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 20 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 20 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 20 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 20 / 29 - Batch time 0 
+INFO:root:TEST batch 21 / 29 - partial error 0.1250 - partial loss 0.1870 - partial MRR  0.0000 - partial MAP 0.9072
+INFO:root:TEST batch 21 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 21 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 21 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 21 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 21 / 29 - Batch time 0 
+INFO:root:TEST batch 22 / 29 - partial error 0.1228 - partial loss 0.1827 - partial MRR  0.0000 - partial MAP 0.9088
+INFO:root:TEST batch 22 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 22 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - Batch time 0 
+INFO:root:TEST batch 23 / 29 - partial error 0.1218 - partial loss 0.1815 - partial MRR  0.0000 - partial MAP 0.9098
+INFO:root:TEST batch 23 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 23 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 23 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 23 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 23 / 29 - Batch time 0 
+INFO:root:TEST batch 24 / 29 - partial error 0.1211 - partial loss 0.1783 - partial MRR  0.0000 - partial MAP 0.9103
+INFO:root:TEST batch 24 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 24 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - Batch time 0 
+INFO:root:TEST batch 25 / 29 - partial error 0.1198 - partial loss 0.1752 - partial MRR  0.0000 - partial MAP 0.9113
+INFO:root:TEST batch 25 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 25 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - Batch time 0 
+INFO:root:TEST batch 26 / 29 - partial error 0.1205 - partial loss 0.1763 - partial MRR  0.0000 - partial MAP 0.9106
+INFO:root:TEST batch 26 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 26 / 29 - measures partial microavg - precision 0.8333 - recall 0.8333 - f1 0.8333 
+INFO:root:TEST batch 26 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 26 / 29 - measures partial for class 1 - precision 0.8333 - recall 1.0000 - f1 0.9091 
+INFO:root:TEST batch 26 / 29 - Batch time 0 
+INFO:root:TEST batch 27 / 29 - partial error 0.1339 - partial loss 0.1836 - partial MRR  0.0000 - partial MAP 0.9030
+INFO:root:TEST batch 27 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(14, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')}
+INFO:root:TEST batch 27 / 29 - measures partial microavg - precision 0.5625 - recall 0.5625 - f1 0.5625 
+INFO:root:TEST batch 27 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 27 / 29 - measures partial for class 1 - precision 0.5625 - recall 1.0000 - f1 0.7200 
+INFO:root:TEST batch 27 / 29 - Batch time 0 
+INFO:root:TEST batch 28 / 29 - partial error 0.1335 - partial loss 0.1834 - partial MRR  0.0000 - partial MAP 0.9030
+INFO:root:TEST batch 28 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 28 / 29 - measures partial microavg - precision 0.8750 - recall 0.8750 - f1 0.8750 
+INFO:root:TEST batch 28 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 28 / 29 - measures partial for class 1 - precision 0.8750 - recall 1.0000 - f1 0.9333 
+INFO:root:TEST batch 28 / 29 - Batch time 0 
+INFO:root:TEST batch 29 / 29 - partial error 0.1320 - partial loss 0.1823 - partial MRR  0.0000 - partial MAP 0.9048
+INFO:root:TEST batch 29 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 29 / 29 - measures partial microavg - precision 0.9167 - recall 0.9167 - f1 0.9167 
+INFO:root:TEST batch 29 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 29 / 29 - measures partial for class 1 - precision 0.9167 - recall 1.0000 - f1 0.9565 
+INFO:root:TEST batch 29 / 29 - Batch time 0 
+INFO:root:TEST mean losses tensor(0.1823, device='cuda:0')
+INFO:root:TEST mean errors 0.13202933967113495
+INFO:root:TEST mean MRR 0.0 - mean MAP 0.9047685712940636
+INFO:root:TEST tp {0: tensor(0, device='cuda:0'), 1: tensor(710, device='cuda:0')},fn {0: tensor(108, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(108, device='cuda:0')}
+INFO:root:TEST measures microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST measures@10 microavg - precision 0.8957 - recall 0.3044 - f1 0.4544 
+INFO:root:TEST measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@10 for class 1 - precision 0.8957 - recall 0.3507 - f1 0.5040 
+INFO:root:TEST measures@100 microavg - precision 0.8673 - recall 0.8631 - f1 0.8652 
+INFO:root:TEST measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@100 for class 1 - precision 0.8673 - recall 0.9944 - f1 0.9265 
+INFO:root:TEST measures@1000 microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@1000 for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST Total epoch time: 1.9256719060000478
+INFO:root:################ TRAIN epoch 5 ###################
+INFO:root:TRAIN mean losses tensor(0.1517, device='cuda:0')
+INFO:root:TRAIN mean errors 0.08715789765119553
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.9346212740249175
+INFO:root:TRAIN tp {0: tensor(0, device='cuda:0'), 1: tensor(26016, device='cuda:0')},fn {0: tensor(2484, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2484, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9128 - recall 0.9128 - f1 0.9128 
+INFO:root:TRAIN measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures for class 1 - precision 0.9128 - recall 1.0000 - f1 0.9544 
+INFO:root:TRAIN measures@10 microavg - precision 0.9565 - recall 0.0285 - f1 0.0554 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9565 - recall 0.0312 - f1 0.0605 
+INFO:root:TRAIN measures@100 microavg - precision 0.9296 - recall 0.2773 - f1 0.4271 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9296 - recall 0.3037 - f1 0.4579 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9114 - recall 0.8812 - f1 0.8960 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9114 - recall 0.9653 - f1 0.9376 
+INFO:root:TRAIN Total epoch time: 10.090882879999981
+INFO:root:################ VALID epoch 5 ###################
+INFO:root:VALID mean losses tensor(0.2321, device='cuda:0')
+INFO:root:VALID mean errors 0.18522484600543976
+INFO:root:VALID mean MRR 0.0 - mean MAP 0.8349496519027719
+INFO:root:VALID tp {0: tensor(0, device='cuda:0'), 1: tensor(1522, device='cuda:0')},fn {0: tensor(346, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(346, device='cuda:0')}
+INFO:root:VALID measures microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID measures@10 microavg - precision 0.8615 - recall 0.0600 - f1 0.1121 
+INFO:root:VALID measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@10 for class 1 - precision 0.8615 - recall 0.0736 - f1 0.1356 
+INFO:root:VALID measures@100 microavg - precision 0.8227 - recall 0.5637 - f1 0.6690 
+INFO:root:VALID measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@100 for class 1 - precision 0.8227 - recall 0.6919 - f1 0.7516 
+INFO:root:VALID measures@1000 microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@1000 for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID Total epoch time: 0.8214440340000237
+INFO:root:################ TEST epoch 5 ###################
+INFO:root:TEST batch 1 / 29 - partial error 0.2444 - partial loss 0.2773 - partial MRR  0.0000 - partial MAP 0.8614
+INFO:root:TEST batch 1 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(68, device='cuda:0')},fn {0: tensor(22, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')}
+INFO:root:TEST batch 1 / 29 - measures partial microavg - precision 0.7556 - recall 0.7556 - f1 0.7556 
+INFO:root:TEST batch 1 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 1 / 29 - measures partial for class 1 - precision 0.7556 - recall 1.0000 - f1 0.8608 
+INFO:root:TEST batch 1 / 29 - Batch time 0 
+INFO:root:TEST batch 2 / 29 - partial error 0.2090 - partial loss 0.2309 - partial MRR  0.0000 - partial MAP 0.8856
+INFO:root:TEST batch 2 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(38, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 2 / 29 - measures partial microavg - precision 0.8636 - recall 0.8636 - f1 0.8636 
+INFO:root:TEST batch 2 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 2 / 29 - measures partial for class 1 - precision 0.8636 - recall 1.0000 - f1 0.9268 
+INFO:root:TEST batch 2 / 29 - Batch time 0 
+INFO:root:TEST batch 3 / 29 - partial error 0.2500 - partial loss 0.4108 - partial MRR  0.0000 - partial MAP 0.8310
+INFO:root:TEST batch 3 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')},fn {0: tensor(12, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')}
+INFO:root:TEST batch 3 / 29 - measures partial microavg - precision 0.5385 - recall 0.5385 - f1 0.5385 
+INFO:root:TEST batch 3 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 3 / 29 - measures partial for class 1 - precision 0.5385 - recall 1.0000 - f1 0.7000 
+INFO:root:TEST batch 3 / 29 - Batch time 0 
+INFO:root:TEST batch 4 / 29 - partial error 0.2323 - partial loss 0.3630 - partial MRR  0.0000 - partial MAP 0.8240
+INFO:root:TEST batch 4 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(32, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 4 / 29 - measures partial microavg - precision 0.8421 - recall 0.8421 - f1 0.8421 
+INFO:root:TEST batch 4 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 4 / 29 - measures partial for class 1 - precision 0.8421 - recall 1.0000 - f1 0.9143 
+INFO:root:TEST batch 4 / 29 - Batch time 0 
+INFO:root:TEST batch 5 / 29 - partial error 0.2202 - partial loss 0.3252 - partial MRR  0.0000 - partial MAP 0.8290
+INFO:root:TEST batch 5 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 5 / 29 - measures partial microavg - precision 0.9000 - recall 0.9000 - f1 0.9000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 1 - precision 0.9000 - recall 1.0000 - f1 0.9474 
+INFO:root:TEST batch 5 / 29 - Batch time 0 
+INFO:root:TEST batch 6 / 29 - partial error 0.2155 - partial loss 0.2963 - partial MRR  0.0000 - partial MAP 0.8379
+INFO:root:TEST batch 6 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 6 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 6 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 6 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 6 / 29 - Batch time 0 
+INFO:root:TEST batch 7 / 29 - partial error 0.2114 - partial loss 0.2835 - partial MRR  0.0000 - partial MAP 0.8395
+INFO:root:TEST batch 7 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 7 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 7 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 7 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 7 / 29 - Batch time 0 
+INFO:root:TEST batch 8 / 29 - partial error 0.1926 - partial loss 0.2571 - partial MRR  0.0000 - partial MAP 0.8538
+INFO:root:TEST batch 8 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 8 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - Batch time 0 
+INFO:root:TEST batch 9 / 29 - partial error 0.1871 - partial loss 0.2355 - partial MRR  0.0000 - partial MAP 0.8580
+INFO:root:TEST batch 9 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 9 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - Batch time 0 
+INFO:root:TEST batch 10 / 29 - partial error 0.1414 - partial loss 0.2191 - partial MRR  0.0000 - partial MAP 0.8955
+INFO:root:TEST batch 10 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(102, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 10 / 29 - measures partial microavg - precision 0.9808 - recall 0.9808 - f1 0.9808 
+INFO:root:TEST batch 10 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 10 / 29 - measures partial for class 1 - precision 0.9808 - recall 1.0000 - f1 0.9903 
+INFO:root:TEST batch 10 / 29 - Batch time 0 
+INFO:root:TEST batch 11 / 29 - partial error 0.1381 - partial loss 0.2142 - partial MRR  0.0000 - partial MAP 0.9021
+INFO:root:TEST batch 11 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(34, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 11 / 29 - measures partial microavg - precision 0.8947 - recall 0.8947 - f1 0.8947 
+INFO:root:TEST batch 11 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 11 / 29 - measures partial for class 1 - precision 0.8947 - recall 1.0000 - f1 0.9444 
+INFO:root:TEST batch 11 / 29 - Batch time 0 
+INFO:root:TEST batch 12 / 29 - partial error 0.1447 - partial loss 0.2157 - partial MRR  0.0000 - partial MAP 0.9007
+INFO:root:TEST batch 12 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(40, device='cuda:0')},fn {0: tensor(10, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')}
+INFO:root:TEST batch 12 / 29 - measures partial microavg - precision 0.8000 - recall 0.8000 - f1 0.8000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 1 - precision 0.8000 - recall 1.0000 - f1 0.8889 
+INFO:root:TEST batch 12 / 29 - Batch time 0 
+INFO:root:TEST batch 13 / 29 - partial error 0.1494 - partial loss 0.2260 - partial MRR  0.0000 - partial MAP 0.8961
+INFO:root:TEST batch 13 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 13 / 29 - measures partial microavg - precision 0.6667 - recall 0.6667 - f1 0.6667 
+INFO:root:TEST batch 13 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 13 / 29 - measures partial for class 1 - precision 0.6667 - recall 1.0000 - f1 0.8000 
+INFO:root:TEST batch 13 / 29 - Batch time 0 
+INFO:root:TEST batch 14 / 29 - partial error 0.1423 - partial loss 0.2186 - partial MRR  0.0000 - partial MAP 0.9037
+INFO:root:TEST batch 14 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(36, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 14 / 29 - measures partial microavg - precision 0.9474 - recall 0.9474 - f1 0.9474 
+INFO:root:TEST batch 14 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 14 / 29 - measures partial for class 1 - precision 0.9474 - recall 1.0000 - f1 0.9730 
+INFO:root:TEST batch 14 / 29 - Batch time 0 
+INFO:root:TEST batch 15 / 29 - partial error 0.1350 - partial loss 0.2088 - partial MRR  0.0000 - partial MAP 0.9086
+INFO:root:TEST batch 15 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 15 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - Batch time 0 
+INFO:root:TEST batch 16 / 29 - partial error 0.1294 - partial loss 0.2007 - partial MRR  0.0000 - partial MAP 0.9124
+INFO:root:TEST batch 16 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 16 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - Batch time 0 
+INFO:root:TEST batch 17 / 29 - partial error 0.1279 - partial loss 0.1989 - partial MRR  0.0000 - partial MAP 0.9121
+INFO:root:TEST batch 17 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 17 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 17 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 17 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 17 / 29 - Batch time 0 
+INFO:root:TEST batch 18 / 29 - partial error 0.1296 - partial loss 0.2035 - partial MRR  0.0000 - partial MAP 0.9078
+INFO:root:TEST batch 18 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 18 / 29 - measures partial microavg - precision 0.7500 - recall 0.7500 - f1 0.7500 
+INFO:root:TEST batch 18 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 18 / 29 - measures partial for class 1 - precision 0.7500 - recall 1.0000 - f1 0.8571 
+INFO:root:TEST batch 18 / 29 - Batch time 0 
+INFO:root:TEST batch 19 / 29 - partial error 0.1274 - partial loss 0.1996 - partial MRR  0.0000 - partial MAP 0.9113
+INFO:root:TEST batch 19 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 19 / 29 - measures partial microavg - precision 0.9231 - recall 0.9231 - f1 0.9231 
+INFO:root:TEST batch 19 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 19 / 29 - measures partial for class 1 - precision 0.9231 - recall 1.0000 - f1 0.9600 
+INFO:root:TEST batch 19 / 29 - Batch time 0 
+INFO:root:TEST batch 20 / 29 - partial error 0.1262 - partial loss 0.1979 - partial MRR  0.0000 - partial MAP 0.9101
+INFO:root:TEST batch 20 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 20 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 20 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 20 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 20 / 29 - Batch time 0 
+INFO:root:TEST batch 21 / 29 - partial error 0.1250 - partial loss 0.1967 - partial MRR  0.0000 - partial MAP 0.9104
+INFO:root:TEST batch 21 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 21 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 21 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 21 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 21 / 29 - Batch time 0 
+INFO:root:TEST batch 22 / 29 - partial error 0.1228 - partial loss 0.1919 - partial MRR  0.0000 - partial MAP 0.9119
+INFO:root:TEST batch 22 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 22 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - Batch time 0 
+INFO:root:TEST batch 23 / 29 - partial error 0.1218 - partial loss 0.1904 - partial MRR  0.0000 - partial MAP 0.9117
+INFO:root:TEST batch 23 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 23 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 23 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 23 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 23 / 29 - Batch time 0 
+INFO:root:TEST batch 24 / 29 - partial error 0.1211 - partial loss 0.1874 - partial MRR  0.0000 - partial MAP 0.9122
+INFO:root:TEST batch 24 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 24 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - Batch time 0 
+INFO:root:TEST batch 25 / 29 - partial error 0.1198 - partial loss 0.1842 - partial MRR  0.0000 - partial MAP 0.9131
+INFO:root:TEST batch 25 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 25 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - Batch time 0 
+INFO:root:TEST batch 26 / 29 - partial error 0.1205 - partial loss 0.1848 - partial MRR  0.0000 - partial MAP 0.9140
+INFO:root:TEST batch 26 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 26 / 29 - measures partial microavg - precision 0.8333 - recall 0.8333 - f1 0.8333 
+INFO:root:TEST batch 26 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 26 / 29 - measures partial for class 1 - precision 0.8333 - recall 1.0000 - f1 0.9091 
+INFO:root:TEST batch 26 / 29 - Batch time 0 
+INFO:root:TEST batch 27 / 29 - partial error 0.1339 - partial loss 0.1910 - partial MRR  0.0000 - partial MAP 0.8996
+INFO:root:TEST batch 27 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(14, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')}
+INFO:root:TEST batch 27 / 29 - measures partial microavg - precision 0.5625 - recall 0.5625 - f1 0.5625 
+INFO:root:TEST batch 27 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 27 / 29 - measures partial for class 1 - precision 0.5625 - recall 1.0000 - f1 0.7200 
+INFO:root:TEST batch 27 / 29 - Batch time 0 
+INFO:root:TEST batch 28 / 29 - partial error 0.1335 - partial loss 0.1905 - partial MRR  0.0000 - partial MAP 0.9010
+INFO:root:TEST batch 28 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 28 / 29 - measures partial microavg - precision 0.8750 - recall 0.8750 - f1 0.8750 
+INFO:root:TEST batch 28 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 28 / 29 - measures partial for class 1 - precision 0.8750 - recall 1.0000 - f1 0.9333 
+INFO:root:TEST batch 28 / 29 - Batch time 0 
+INFO:root:TEST batch 29 / 29 - partial error 0.1320 - partial loss 0.1892 - partial MRR  0.0000 - partial MAP 0.9028
+INFO:root:TEST batch 29 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 29 / 29 - measures partial microavg - precision 0.9167 - recall 0.9167 - f1 0.9167 
+INFO:root:TEST batch 29 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 29 / 29 - measures partial for class 1 - precision 0.9167 - recall 1.0000 - f1 0.9565 
+INFO:root:TEST batch 29 / 29 - Batch time 0 
+INFO:root:TEST mean losses tensor(0.1892, device='cuda:0')
+INFO:root:TEST mean errors 0.13202933967113495
+INFO:root:TEST mean MRR 0.0 - mean MAP 0.9028021963582404
+INFO:root:TEST tp {0: tensor(0, device='cuda:0'), 1: tensor(710, device='cuda:0')},fn {0: tensor(108, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(108, device='cuda:0')}
+INFO:root:TEST measures microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST measures@10 microavg - precision 0.8741 - recall 0.2971 - f1 0.4434 
+INFO:root:TEST measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@10 for class 1 - precision 0.8741 - recall 0.3423 - f1 0.4919 
+INFO:root:TEST measures@100 microavg - precision 0.8673 - recall 0.8631 - f1 0.8652 
+INFO:root:TEST measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@100 for class 1 - precision 0.8673 - recall 0.9944 - f1 0.9265 
+INFO:root:TEST measures@1000 microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@1000 for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST Total epoch time: 1.8681277630000181
+INFO:root:################ TRAIN epoch 6 ###################
+INFO:root:TRAIN mean losses tensor(0.1508, device='cuda:0')
+INFO:root:TRAIN mean errors 0.08715789765119553
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.9361267204774854
+INFO:root:TRAIN tp {0: tensor(0, device='cuda:0'), 1: tensor(26016, device='cuda:0')},fn {0: tensor(2484, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2484, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9128 - recall 0.9128 - f1 0.9128 
+INFO:root:TRAIN measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures for class 1 - precision 0.9128 - recall 1.0000 - f1 0.9544 
+INFO:root:TRAIN measures@10 microavg - precision 0.9647 - recall 0.0288 - f1 0.0559 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9647 - recall 0.0315 - f1 0.0610 
+INFO:root:TRAIN measures@100 microavg - precision 0.9329 - recall 0.2782 - f1 0.4286 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9329 - recall 0.3048 - f1 0.4595 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9116 - recall 0.8813 - f1 0.8962 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9116 - recall 0.9655 - f1 0.9378 
+INFO:root:TRAIN Total epoch time: 10.121842797
+INFO:root:################ VALID epoch 6 ###################
+INFO:root:VALID mean losses tensor(0.2545, device='cuda:0')
+INFO:root:VALID mean errors 0.18522484600543976
+INFO:root:VALID mean MRR 0.0 - mean MAP 0.8265911155332298
+INFO:root:VALID tp {0: tensor(0, device='cuda:0'), 1: tensor(1522, device='cuda:0')},fn {0: tensor(346, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(346, device='cuda:0')}
+INFO:root:VALID measures microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID measures@10 microavg - precision 0.8615 - recall 0.0600 - f1 0.1121 
+INFO:root:VALID measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@10 for class 1 - precision 0.8615 - recall 0.0736 - f1 0.1356 
+INFO:root:VALID measures@100 microavg - precision 0.8203 - recall 0.5621 - f1 0.6671 
+INFO:root:VALID measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@100 for class 1 - precision 0.8203 - recall 0.6899 - f1 0.7495 
+INFO:root:VALID measures@1000 microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@1000 for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID Total epoch time: 0.7949854590000314
+INFO:root:################ TEST epoch 6 ###################
+INFO:root:TEST batch 1 / 29 - partial error 0.2444 - partial loss 0.2847 - partial MRR  0.0000 - partial MAP 0.8703
+INFO:root:TEST batch 1 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(68, device='cuda:0')},fn {0: tensor(22, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')}
+INFO:root:TEST batch 1 / 29 - measures partial microavg - precision 0.7556 - recall 0.7556 - f1 0.7556 
+INFO:root:TEST batch 1 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 1 / 29 - measures partial for class 1 - precision 0.7556 - recall 1.0000 - f1 0.8608 
+INFO:root:TEST batch 1 / 29 - Batch time 0 
+INFO:root:TEST batch 2 / 29 - partial error 0.2090 - partial loss 0.2359 - partial MRR  0.0000 - partial MAP 0.8960
+INFO:root:TEST batch 2 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(38, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 2 / 29 - measures partial microavg - precision 0.8636 - recall 0.8636 - f1 0.8636 
+INFO:root:TEST batch 2 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 2 / 29 - measures partial for class 1 - precision 0.8636 - recall 1.0000 - f1 0.9268 
+INFO:root:TEST batch 2 / 29 - Batch time 0 
+INFO:root:TEST batch 3 / 29 - partial error 0.2500 - partial loss 0.4960 - partial MRR  0.0000 - partial MAP 0.8427
+INFO:root:TEST batch 3 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')},fn {0: tensor(12, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')}
+INFO:root:TEST batch 3 / 29 - measures partial microavg - precision 0.5385 - recall 0.5385 - f1 0.5385 
+INFO:root:TEST batch 3 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 3 / 29 - measures partial for class 1 - precision 0.5385 - recall 1.0000 - f1 0.7000 
+INFO:root:TEST batch 3 / 29 - Batch time 0 
+INFO:root:TEST batch 4 / 29 - partial error 0.2323 - partial loss 0.4318 - partial MRR  0.0000 - partial MAP 0.8323
+INFO:root:TEST batch 4 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(32, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 4 / 29 - measures partial microavg - precision 0.8421 - recall 0.8421 - f1 0.8421 
+INFO:root:TEST batch 4 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 4 / 29 - measures partial for class 1 - precision 0.8421 - recall 1.0000 - f1 0.9143 
+INFO:root:TEST batch 4 / 29 - Batch time 0 
+INFO:root:TEST batch 5 / 29 - partial error 0.2202 - partial loss 0.3815 - partial MRR  0.0000 - partial MAP 0.8387
+INFO:root:TEST batch 5 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 5 / 29 - measures partial microavg - precision 0.9000 - recall 0.9000 - f1 0.9000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 1 - precision 0.9000 - recall 1.0000 - f1 0.9474 
+INFO:root:TEST batch 5 / 29 - Batch time 0 
+INFO:root:TEST batch 6 / 29 - partial error 0.2155 - partial loss 0.3408 - partial MRR  0.0000 - partial MAP 0.8470
+INFO:root:TEST batch 6 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 6 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 6 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 6 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 6 / 29 - Batch time 0 
+INFO:root:TEST batch 7 / 29 - partial error 0.2114 - partial loss 0.3231 - partial MRR  0.0000 - partial MAP 0.8481
+INFO:root:TEST batch 7 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 7 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 7 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 7 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 7 / 29 - Batch time 0 
+INFO:root:TEST batch 8 / 29 - partial error 0.1926 - partial loss 0.2906 - partial MRR  0.0000 - partial MAP 0.8616
+INFO:root:TEST batch 8 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 8 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - Batch time 0 
+INFO:root:TEST batch 9 / 29 - partial error 0.1871 - partial loss 0.2642 - partial MRR  0.0000 - partial MAP 0.8656
+INFO:root:TEST batch 9 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 9 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - Batch time 0 
+INFO:root:TEST batch 10 / 29 - partial error 0.1414 - partial loss 0.2439 - partial MRR  0.0000 - partial MAP 0.9010
+INFO:root:TEST batch 10 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(102, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 10 / 29 - measures partial microavg - precision 0.9808 - recall 0.9808 - f1 0.9808 
+INFO:root:TEST batch 10 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 10 / 29 - measures partial for class 1 - precision 0.9808 - recall 1.0000 - f1 0.9903 
+INFO:root:TEST batch 10 / 29 - Batch time 0 
+INFO:root:TEST batch 11 / 29 - partial error 0.1381 - partial loss 0.2366 - partial MRR  0.0000 - partial MAP 0.9062
+INFO:root:TEST batch 11 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(34, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 11 / 29 - measures partial microavg - precision 0.8947 - recall 0.8947 - f1 0.8947 
+INFO:root:TEST batch 11 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 11 / 29 - measures partial for class 1 - precision 0.8947 - recall 1.0000 - f1 0.9444 
+INFO:root:TEST batch 11 / 29 - Batch time 0 
+INFO:root:TEST batch 12 / 29 - partial error 0.1447 - partial loss 0.2362 - partial MRR  0.0000 - partial MAP 0.9047
+INFO:root:TEST batch 12 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(40, device='cuda:0')},fn {0: tensor(10, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')}
+INFO:root:TEST batch 12 / 29 - measures partial microavg - precision 0.8000 - recall 0.8000 - f1 0.8000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 1 - precision 0.8000 - recall 1.0000 - f1 0.8889 
+INFO:root:TEST batch 12 / 29 - Batch time 0 
+INFO:root:TEST batch 13 / 29 - partial error 0.1494 - partial loss 0.2457 - partial MRR  0.0000 - partial MAP 0.8953
+INFO:root:TEST batch 13 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 13 / 29 - measures partial microavg - precision 0.6667 - recall 0.6667 - f1 0.6667 
+INFO:root:TEST batch 13 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 13 / 29 - measures partial for class 1 - precision 0.6667 - recall 1.0000 - f1 0.8000 
+INFO:root:TEST batch 13 / 29 - Batch time 0 
+INFO:root:TEST batch 14 / 29 - partial error 0.1423 - partial loss 0.2367 - partial MRR  0.0000 - partial MAP 0.9030
+INFO:root:TEST batch 14 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(36, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 14 / 29 - measures partial microavg - precision 0.9474 - recall 0.9474 - f1 0.9474 
+INFO:root:TEST batch 14 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 14 / 29 - measures partial for class 1 - precision 0.9474 - recall 1.0000 - f1 0.9730 
+INFO:root:TEST batch 14 / 29 - Batch time 0 
+INFO:root:TEST batch 15 / 29 - partial error 0.1350 - partial loss 0.2251 - partial MRR  0.0000 - partial MAP 0.9079
+INFO:root:TEST batch 15 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 15 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - Batch time 0 
+INFO:root:TEST batch 16 / 29 - partial error 0.1294 - partial loss 0.2159 - partial MRR  0.0000 - partial MAP 0.9118
+INFO:root:TEST batch 16 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 16 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - Batch time 0 
+INFO:root:TEST batch 17 / 29 - partial error 0.1279 - partial loss 0.2138 - partial MRR  0.0000 - partial MAP 0.9094
+INFO:root:TEST batch 17 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 17 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 17 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 17 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 17 / 29 - Batch time 0 
+INFO:root:TEST batch 18 / 29 - partial error 0.1296 - partial loss 0.2176 - partial MRR  0.0000 - partial MAP 0.9078
+INFO:root:TEST batch 18 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 18 / 29 - measures partial microavg - precision 0.7500 - recall 0.7500 - f1 0.7500 
+INFO:root:TEST batch 18 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 18 / 29 - measures partial for class 1 - precision 0.7500 - recall 1.0000 - f1 0.8571 
+INFO:root:TEST batch 18 / 29 - Batch time 0 
+INFO:root:TEST batch 19 / 29 - partial error 0.1274 - partial loss 0.2130 - partial MRR  0.0000 - partial MAP 0.9113
+INFO:root:TEST batch 19 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 19 / 29 - measures partial microavg - precision 0.9231 - recall 0.9231 - f1 0.9231 
+INFO:root:TEST batch 19 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 19 / 29 - measures partial for class 1 - precision 0.9231 - recall 1.0000 - f1 0.9600 
+INFO:root:TEST batch 19 / 29 - Batch time 0 
+INFO:root:TEST batch 20 / 29 - partial error 0.1262 - partial loss 0.2107 - partial MRR  0.0000 - partial MAP 0.9118
+INFO:root:TEST batch 20 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 20 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 20 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 20 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 20 / 29 - Batch time 0 
+INFO:root:TEST batch 21 / 29 - partial error 0.1250 - partial loss 0.2095 - partial MRR  0.0000 - partial MAP 0.9115
+INFO:root:TEST batch 21 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 21 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 21 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 21 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 21 / 29 - Batch time 0 
+INFO:root:TEST batch 22 / 29 - partial error 0.1228 - partial loss 0.2042 - partial MRR  0.0000 - partial MAP 0.9130
+INFO:root:TEST batch 22 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 22 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - Batch time 0 
+INFO:root:TEST batch 23 / 29 - partial error 0.1218 - partial loss 0.2023 - partial MRR  0.0000 - partial MAP 0.9119
+INFO:root:TEST batch 23 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 23 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 23 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 23 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 23 / 29 - Batch time 0 
+INFO:root:TEST batch 24 / 29 - partial error 0.1211 - partial loss 0.1995 - partial MRR  0.0000 - partial MAP 0.9124
+INFO:root:TEST batch 24 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 24 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - Batch time 0 
+INFO:root:TEST batch 25 / 29 - partial error 0.1198 - partial loss 0.1961 - partial MRR  0.0000 - partial MAP 0.9133
+INFO:root:TEST batch 25 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 25 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - Batch time 0 
+INFO:root:TEST batch 26 / 29 - partial error 0.1205 - partial loss 0.1961 - partial MRR  0.0000 - partial MAP 0.9135
+INFO:root:TEST batch 26 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 26 / 29 - measures partial microavg - precision 0.8333 - recall 0.8333 - f1 0.8333 
+INFO:root:TEST batch 26 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 26 / 29 - measures partial for class 1 - precision 0.8333 - recall 1.0000 - f1 0.9091 
+INFO:root:TEST batch 26 / 29 - Batch time 0 
+INFO:root:TEST batch 27 / 29 - partial error 0.1339 - partial loss 0.2011 - partial MRR  0.0000 - partial MAP 0.9035
+INFO:root:TEST batch 27 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(14, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')}
+INFO:root:TEST batch 27 / 29 - measures partial microavg - precision 0.5625 - recall 0.5625 - f1 0.5625 
+INFO:root:TEST batch 27 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 27 / 29 - measures partial for class 1 - precision 0.5625 - recall 1.0000 - f1 0.7200 
+INFO:root:TEST batch 27 / 29 - Batch time 0 
+INFO:root:TEST batch 28 / 29 - partial error 0.1335 - partial loss 0.2003 - partial MRR  0.0000 - partial MAP 0.9040
+INFO:root:TEST batch 28 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 28 / 29 - measures partial microavg - precision 0.8750 - recall 0.8750 - f1 0.8750 
+INFO:root:TEST batch 28 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 28 / 29 - measures partial for class 1 - precision 0.8750 - recall 1.0000 - f1 0.9333 
+INFO:root:TEST batch 28 / 29 - Batch time 0 
+INFO:root:TEST batch 29 / 29 - partial error 0.1320 - partial loss 0.1987 - partial MRR  0.0000 - partial MAP 0.9069
+INFO:root:TEST batch 29 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 29 / 29 - measures partial microavg - precision 0.9167 - recall 0.9167 - f1 0.9167 
+INFO:root:TEST batch 29 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 29 / 29 - measures partial for class 1 - precision 0.9167 - recall 1.0000 - f1 0.9565 
+INFO:root:TEST batch 29 / 29 - Batch time 0 
+INFO:root:TEST mean losses tensor(0.1987, device='cuda:0')
+INFO:root:TEST mean errors 0.13202933967113495
+INFO:root:TEST mean MRR 0.0 - mean MAP 0.9068527182420826
+INFO:root:TEST tp {0: tensor(0, device='cuda:0'), 1: tensor(710, device='cuda:0')},fn {0: tensor(108, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(108, device='cuda:0')}
+INFO:root:TEST measures microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST measures@10 microavg - precision 0.8921 - recall 0.3032 - f1 0.4526 
+INFO:root:TEST measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@10 for class 1 - precision 0.8921 - recall 0.3493 - f1 0.5020 
+INFO:root:TEST measures@100 microavg - precision 0.8673 - recall 0.8631 - f1 0.8652 
+INFO:root:TEST measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@100 for class 1 - precision 0.8673 - recall 0.9944 - f1 0.9265 
+INFO:root:TEST measures@1000 microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@1000 for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST Total epoch time: 1.9474573389999819
+INFO:root:################ TRAIN epoch 7 ###################
+INFO:root:TRAIN mean losses tensor(0.1496, device='cuda:0')
+INFO:root:TRAIN mean errors 0.09687719494104385
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.9352432387990125
+INFO:root:TRAIN tp {0: tensor(11, device='cuda:0'), 1: tensor(25728, device='cuda:0')},fn {0: tensor(2473, device='cuda:0'), 1: tensor(288, device='cuda:0')},fp {0: tensor(288, device='cuda:0'), 1: tensor(2473, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9031 - recall 0.9031 - f1 0.9031 
+INFO:root:TRAIN measures for class 0 - precision 0.0368 - recall 0.0044 - f1 0.0079 
+INFO:root:TRAIN measures for class 1 - precision 0.9123 - recall 0.9889 - f1 0.9491 
+INFO:root:TRAIN measures@10 microavg - precision 0.8650 - recall 0.0288 - f1 0.0557 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0204 - recall 0.0008 - f1 0.0015 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9624 - recall 0.0314 - f1 0.0609 
+INFO:root:TRAIN measures@100 microavg - precision 0.9016 - recall 0.2784 - f1 0.4254 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0368 - recall 0.0044 - f1 0.0079 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9320 - recall 0.3045 - f1 0.4590 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9015 - recall 0.8742 - f1 0.8876 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0368 - recall 0.0044 - f1 0.0079 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9109 - recall 0.9573 - f1 0.9335 
+INFO:root:TRAIN Total epoch time: 10.16134912299998
+INFO:root:################ VALID epoch 7 ###################
+INFO:root:VALID mean losses tensor(0.2815, device='cuda:0')
+INFO:root:VALID mean errors 0.18522484600543976
+INFO:root:VALID mean MRR 0.0 - mean MAP 0.8231867964609179
+INFO:root:VALID tp {0: tensor(0, device='cuda:0'), 1: tensor(1522, device='cuda:0')},fn {0: tensor(346, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(346, device='cuda:0')}
+INFO:root:VALID measures microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID measures@10 microavg - precision 0.8615 - recall 0.0600 - f1 0.1121 
+INFO:root:VALID measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@10 for class 1 - precision 0.8615 - recall 0.0736 - f1 0.1356 
+INFO:root:VALID measures@100 microavg - precision 0.8219 - recall 0.5632 - f1 0.6684 
+INFO:root:VALID measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@100 for class 1 - precision 0.8219 - recall 0.6912 - f1 0.7509 
+INFO:root:VALID measures@1000 microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@1000 for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID Total epoch time: 0.8311552359999723
+INFO:root:################ TEST epoch 7 ###################
+INFO:root:TEST batch 1 / 29 - partial error 0.2444 - partial loss 0.3384 - partial MRR  0.0000 - partial MAP 0.8913
+INFO:root:TEST batch 1 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(68, device='cuda:0')},fn {0: tensor(22, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')}
+INFO:root:TEST batch 1 / 29 - measures partial microavg - precision 0.7556 - recall 0.7556 - f1 0.7556 
+INFO:root:TEST batch 1 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 1 / 29 - measures partial for class 1 - precision 0.7556 - recall 1.0000 - f1 0.8608 
+INFO:root:TEST batch 1 / 29 - Batch time 0 
+INFO:root:TEST batch 2 / 29 - partial error 0.2090 - partial loss 0.2740 - partial MRR  0.0000 - partial MAP 0.8851
+INFO:root:TEST batch 2 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(38, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 2 / 29 - measures partial microavg - precision 0.8636 - recall 0.8636 - f1 0.8636 
+INFO:root:TEST batch 2 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 2 / 29 - measures partial for class 1 - precision 0.8636 - recall 1.0000 - f1 0.9268 
+INFO:root:TEST batch 2 / 29 - Batch time 0 
+INFO:root:TEST batch 3 / 29 - partial error 0.2500 - partial loss 0.7384 - partial MRR  0.0000 - partial MAP 0.8558
+INFO:root:TEST batch 3 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')},fn {0: tensor(12, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')}
+INFO:root:TEST batch 3 / 29 - measures partial microavg - precision 0.5385 - recall 0.5385 - f1 0.5385 
+INFO:root:TEST batch 3 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 3 / 29 - measures partial for class 1 - precision 0.5385 - recall 1.0000 - f1 0.7000 
+INFO:root:TEST batch 3 / 29 - Batch time 0 
+INFO:root:TEST batch 4 / 29 - partial error 0.2323 - partial loss 0.6365 - partial MRR  0.0000 - partial MAP 0.8449
+INFO:root:TEST batch 4 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(32, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 4 / 29 - measures partial microavg - precision 0.8421 - recall 0.8421 - f1 0.8421 
+INFO:root:TEST batch 4 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 4 / 29 - measures partial for class 1 - precision 0.8421 - recall 1.0000 - f1 0.9143 
+INFO:root:TEST batch 4 / 29 - Batch time 0 
+INFO:root:TEST batch 5 / 29 - partial error 0.2202 - partial loss 0.5482 - partial MRR  0.0000 - partial MAP 0.8502
+INFO:root:TEST batch 5 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 5 / 29 - measures partial microavg - precision 0.9000 - recall 0.9000 - f1 0.9000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 1 - precision 0.9000 - recall 1.0000 - f1 0.9474 
+INFO:root:TEST batch 5 / 29 - Batch time 0 
+INFO:root:TEST batch 6 / 29 - partial error 0.2155 - partial loss 0.4780 - partial MRR  0.0000 - partial MAP 0.8577
+INFO:root:TEST batch 6 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 6 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 6 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 6 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 6 / 29 - Batch time 0 
+INFO:root:TEST batch 7 / 29 - partial error 0.2114 - partial loss 0.4447 - partial MRR  0.0000 - partial MAP 0.8548
+INFO:root:TEST batch 7 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 7 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 7 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 7 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 7 / 29 - Batch time 0 
+INFO:root:TEST batch 8 / 29 - partial error 0.1926 - partial loss 0.3930 - partial MRR  0.0000 - partial MAP 0.8677
+INFO:root:TEST batch 8 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 8 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - Batch time 0 
+INFO:root:TEST batch 9 / 29 - partial error 0.1871 - partial loss 0.3530 - partial MRR  0.0000 - partial MAP 0.8715
+INFO:root:TEST batch 9 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 9 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - Batch time 0 
+INFO:root:TEST batch 10 / 29 - partial error 0.1414 - partial loss 0.3229 - partial MRR  0.0000 - partial MAP 0.9056
+INFO:root:TEST batch 10 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(102, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 10 / 29 - measures partial microavg - precision 0.9808 - recall 0.9808 - f1 0.9808 
+INFO:root:TEST batch 10 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 10 / 29 - measures partial for class 1 - precision 0.9808 - recall 1.0000 - f1 0.9903 
+INFO:root:TEST batch 10 / 29 - Batch time 0 
+INFO:root:TEST batch 11 / 29 - partial error 0.1381 - partial loss 0.3082 - partial MRR  0.0000 - partial MAP 0.9098
+INFO:root:TEST batch 11 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(34, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 11 / 29 - measures partial microavg - precision 0.8947 - recall 0.8947 - f1 0.8947 
+INFO:root:TEST batch 11 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 11 / 29 - measures partial for class 1 - precision 0.8947 - recall 1.0000 - f1 0.9444 
+INFO:root:TEST batch 11 / 29 - Batch time 0 
+INFO:root:TEST batch 12 / 29 - partial error 0.1447 - partial loss 0.3032 - partial MRR  0.0000 - partial MAP 0.9077
+INFO:root:TEST batch 12 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(40, device='cuda:0')},fn {0: tensor(10, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')}
+INFO:root:TEST batch 12 / 29 - measures partial microavg - precision 0.8000 - recall 0.8000 - f1 0.8000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 1 - precision 0.8000 - recall 1.0000 - f1 0.8889 
+INFO:root:TEST batch 12 / 29 - Batch time 0 
+INFO:root:TEST batch 13 / 29 - partial error 0.1494 - partial loss 0.3116 - partial MRR  0.0000 - partial MAP 0.9039
+INFO:root:TEST batch 13 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 13 / 29 - measures partial microavg - precision 0.6667 - recall 0.6667 - f1 0.6667 
+INFO:root:TEST batch 13 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 13 / 29 - measures partial for class 1 - precision 0.6667 - recall 1.0000 - f1 0.8000 
+INFO:root:TEST batch 13 / 29 - Batch time 0 
+INFO:root:TEST batch 14 / 29 - partial error 0.1423 - partial loss 0.2973 - partial MRR  0.0000 - partial MAP 0.9099
+INFO:root:TEST batch 14 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(36, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 14 / 29 - measures partial microavg - precision 0.9474 - recall 0.9474 - f1 0.9474 
+INFO:root:TEST batch 14 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 14 / 29 - measures partial for class 1 - precision 0.9474 - recall 1.0000 - f1 0.9730 
+INFO:root:TEST batch 14 / 29 - Batch time 0 
+INFO:root:TEST batch 15 / 29 - partial error 0.1350 - partial loss 0.2802 - partial MRR  0.0000 - partial MAP 0.9145
+INFO:root:TEST batch 15 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 15 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - Batch time 0 
+INFO:root:TEST batch 16 / 29 - partial error 0.1294 - partial loss 0.2664 - partial MRR  0.0000 - partial MAP 0.9181
+INFO:root:TEST batch 16 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 16 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - Batch time 0 
+INFO:root:TEST batch 17 / 29 - partial error 0.1279 - partial loss 0.2625 - partial MRR  0.0000 - partial MAP 0.9183
+INFO:root:TEST batch 17 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 17 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 17 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 17 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 17 / 29 - Batch time 0 
+INFO:root:TEST batch 18 / 29 - partial error 0.1296 - partial loss 0.2648 - partial MRR  0.0000 - partial MAP 0.9194
+INFO:root:TEST batch 18 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 18 / 29 - measures partial microavg - precision 0.7500 - recall 0.7500 - f1 0.7500 
+INFO:root:TEST batch 18 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 18 / 29 - measures partial for class 1 - precision 0.7500 - recall 1.0000 - f1 0.8571 
+INFO:root:TEST batch 18 / 29 - Batch time 0 
+INFO:root:TEST batch 19 / 29 - partial error 0.1274 - partial loss 0.2591 - partial MRR  0.0000 - partial MAP 0.9224
+INFO:root:TEST batch 19 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 19 / 29 - measures partial microavg - precision 0.9231 - recall 0.9231 - f1 0.9231 
+INFO:root:TEST batch 19 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 19 / 29 - measures partial for class 1 - precision 0.9231 - recall 1.0000 - f1 0.9600 
+INFO:root:TEST batch 19 / 29 - Batch time 0 
+INFO:root:TEST batch 20 / 29 - partial error 0.1262 - partial loss 0.2546 - partial MRR  0.0000 - partial MAP 0.9243
+INFO:root:TEST batch 20 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 20 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 20 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 20 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 20 / 29 - Batch time 0 
+INFO:root:TEST batch 21 / 29 - partial error 0.1250 - partial loss 0.2531 - partial MRR  0.0000 - partial MAP 0.9226
+INFO:root:TEST batch 21 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 21 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 21 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 21 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 21 / 29 - Batch time 0 
+INFO:root:TEST batch 22 / 29 - partial error 0.1228 - partial loss 0.2448 - partial MRR  0.0000 - partial MAP 0.9240
+INFO:root:TEST batch 22 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 22 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - Batch time 0 
+INFO:root:TEST batch 23 / 29 - partial error 0.1218 - partial loss 0.2423 - partial MRR  0.0000 - partial MAP 0.9233
+INFO:root:TEST batch 23 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 23 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 23 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 23 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 23 / 29 - Batch time 0 
+INFO:root:TEST batch 24 / 29 - partial error 0.1211 - partial loss 0.2377 - partial MRR  0.0000 - partial MAP 0.9237
+INFO:root:TEST batch 24 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 24 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - Batch time 0 
+INFO:root:TEST batch 25 / 29 - partial error 0.1198 - partial loss 0.2326 - partial MRR  0.0000 - partial MAP 0.9246
+INFO:root:TEST batch 25 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 25 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - Batch time 0 
+INFO:root:TEST batch 26 / 29 - partial error 0.1205 - partial loss 0.2311 - partial MRR  0.0000 - partial MAP 0.9246
+INFO:root:TEST batch 26 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 26 / 29 - measures partial microavg - precision 0.8333 - recall 0.8333 - f1 0.8333 
+INFO:root:TEST batch 26 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 26 / 29 - measures partial for class 1 - precision 0.8333 - recall 1.0000 - f1 0.9091 
+INFO:root:TEST batch 26 / 29 - Batch time 0 
+INFO:root:TEST batch 27 / 29 - partial error 0.1339 - partial loss 0.2350 - partial MRR  0.0000 - partial MAP 0.9149
+INFO:root:TEST batch 27 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(14, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')}
+INFO:root:TEST batch 27 / 29 - measures partial microavg - precision 0.5625 - recall 0.5625 - f1 0.5625 
+INFO:root:TEST batch 27 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 27 / 29 - measures partial for class 1 - precision 0.5625 - recall 1.0000 - f1 0.7200 
+INFO:root:TEST batch 27 / 29 - Batch time 0 
+INFO:root:TEST batch 28 / 29 - partial error 0.1335 - partial loss 0.2330 - partial MRR  0.0000 - partial MAP 0.9149
+INFO:root:TEST batch 28 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 28 / 29 - measures partial microavg - precision 0.8750 - recall 0.8750 - f1 0.8750 
+INFO:root:TEST batch 28 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 28 / 29 - measures partial for class 1 - precision 0.8750 - recall 1.0000 - f1 0.9333 
+INFO:root:TEST batch 28 / 29 - Batch time 0 
+INFO:root:TEST batch 29 / 29 - partial error 0.1320 - partial loss 0.2302 - partial MRR  0.0000 - partial MAP 0.9164
+INFO:root:TEST batch 29 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 29 / 29 - measures partial microavg - precision 0.9167 - recall 0.9167 - f1 0.9167 
+INFO:root:TEST batch 29 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 29 / 29 - measures partial for class 1 - precision 0.9167 - recall 1.0000 - f1 0.9565 
+INFO:root:TEST batch 29 / 29 - Batch time 0 
+INFO:root:TEST mean losses tensor(0.2302, device='cuda:0')
+INFO:root:TEST mean errors 0.13202933967113495
+INFO:root:TEST mean MRR 0.0 - mean MAP 0.9163634795058918
+INFO:root:TEST tp {0: tensor(0, device='cuda:0'), 1: tensor(710, device='cuda:0')},fn {0: tensor(108, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(108, device='cuda:0')}
+INFO:root:TEST measures microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST measures@10 microavg - precision 0.8993 - recall 0.3056 - f1 0.4562 
+INFO:root:TEST measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@10 for class 1 - precision 0.8993 - recall 0.3521 - f1 0.5061 
+INFO:root:TEST measures@100 microavg - precision 0.8673 - recall 0.8631 - f1 0.8652 
+INFO:root:TEST measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@100 for class 1 - precision 0.8673 - recall 0.9944 - f1 0.9265 
+INFO:root:TEST measures@1000 microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@1000 for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST Total epoch time: 1.9000094759999797
+INFO:root:################ TRAIN epoch 8 ###################
+INFO:root:TRAIN mean losses tensor(0.1483, device='cuda:0')
+INFO:root:TRAIN mean errors 0.09684210270643234
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.93527664497009
+INFO:root:TRAIN tp {0: tensor(6, device='cuda:0'), 1: tensor(25734, device='cuda:0')},fn {0: tensor(2478, device='cuda:0'), 1: tensor(282, device='cuda:0')},fp {0: tensor(282, device='cuda:0'), 1: tensor(2478, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9032 - recall 0.9032 - f1 0.9032 
+INFO:root:TRAIN measures for class 0 - precision 0.0208 - recall 0.0024 - f1 0.0043 
+INFO:root:TRAIN measures for class 1 - precision 0.9122 - recall 0.9892 - f1 0.9491 
+INFO:root:TRAIN measures@10 microavg - precision 0.8731 - recall 0.0285 - f1 0.0552 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0250 - recall 0.0008 - f1 0.0016 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9529 - recall 0.0311 - f1 0.0603 
+INFO:root:TRAIN measures@100 microavg - precision 0.9011 - recall 0.2779 - f1 0.4247 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0208 - recall 0.0024 - f1 0.0043 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9309 - recall 0.3042 - f1 0.4585 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9012 - recall 0.8725 - f1 0.8866 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0208 - recall 0.0024 - f1 0.0043 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9105 - recall 0.9556 - f1 0.9325 
+INFO:root:TRAIN Total epoch time: 10.152694601000007
+INFO:root:################ VALID epoch 8 ###################
+INFO:root:VALID mean losses tensor(0.2662, device='cuda:0')
+INFO:root:VALID mean errors 0.18522484600543976
+INFO:root:VALID mean MRR 0.0 - mean MAP 0.8192711088791955
+INFO:root:VALID tp {0: tensor(0, device='cuda:0'), 1: tensor(1522, device='cuda:0')},fn {0: tensor(346, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(346, device='cuda:0')}
+INFO:root:VALID measures microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID measures@10 microavg - precision 0.8615 - recall 0.0600 - f1 0.1121 
+INFO:root:VALID measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@10 for class 1 - precision 0.8615 - recall 0.0736 - f1 0.1356 
+INFO:root:VALID measures@100 microavg - precision 0.8281 - recall 0.5675 - f1 0.6734 
+INFO:root:VALID measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@100 for class 1 - precision 0.8281 - recall 0.6965 - f1 0.7566 
+INFO:root:VALID measures@1000 microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@1000 for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID Total epoch time: 0.8076419210000267
+INFO:root:################ TEST epoch 8 ###################
+INFO:root:TEST batch 1 / 29 - partial error 0.2444 - partial loss 0.3570 - partial MRR  0.0000 - partial MAP 0.9020
+INFO:root:TEST batch 1 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(68, device='cuda:0')},fn {0: tensor(22, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')}
+INFO:root:TEST batch 1 / 29 - measures partial microavg - precision 0.7556 - recall 0.7556 - f1 0.7556 
+INFO:root:TEST batch 1 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 1 / 29 - measures partial for class 1 - precision 0.7556 - recall 1.0000 - f1 0.8608 
+INFO:root:TEST batch 1 / 29 - Batch time 0 
+INFO:root:TEST batch 2 / 29 - partial error 0.2090 - partial loss 0.2897 - partial MRR  0.0000 - partial MAP 0.8920
+INFO:root:TEST batch 2 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(38, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 2 / 29 - measures partial microavg - precision 0.8636 - recall 0.8636 - f1 0.8636 
+INFO:root:TEST batch 2 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 2 / 29 - measures partial for class 1 - precision 0.8636 - recall 1.0000 - f1 0.9268 
+INFO:root:TEST batch 2 / 29 - Batch time 0 
+INFO:root:TEST batch 3 / 29 - partial error 0.2500 - partial loss 0.7200 - partial MRR  0.0000 - partial MAP 0.8199
+INFO:root:TEST batch 3 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')},fn {0: tensor(12, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')}
+INFO:root:TEST batch 3 / 29 - measures partial microavg - precision 0.5385 - recall 0.5385 - f1 0.5385 
+INFO:root:TEST batch 3 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 3 / 29 - measures partial for class 1 - precision 0.5385 - recall 1.0000 - f1 0.7000 
+INFO:root:TEST batch 3 / 29 - Batch time 0 
+INFO:root:TEST batch 4 / 29 - partial error 0.2323 - partial loss 0.6270 - partial MRR  0.0000 - partial MAP 0.8111
+INFO:root:TEST batch 4 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(32, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 4 / 29 - measures partial microavg - precision 0.8421 - recall 0.8421 - f1 0.8421 
+INFO:root:TEST batch 4 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 4 / 29 - measures partial for class 1 - precision 0.8421 - recall 1.0000 - f1 0.9143 
+INFO:root:TEST batch 4 / 29 - Batch time 0 
+INFO:root:TEST batch 5 / 29 - partial error 0.2202 - partial loss 0.5400 - partial MRR  0.0000 - partial MAP 0.8070
+INFO:root:TEST batch 5 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 5 / 29 - measures partial microavg - precision 0.9000 - recall 0.9000 - f1 0.9000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 1 - precision 0.9000 - recall 1.0000 - f1 0.9474 
+INFO:root:TEST batch 5 / 29 - Batch time 0 
+INFO:root:TEST batch 6 / 29 - partial error 0.2155 - partial loss 0.4725 - partial MRR  0.0000 - partial MAP 0.8187
+INFO:root:TEST batch 6 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 6 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 6 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 6 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 6 / 29 - Batch time 0 
+INFO:root:TEST batch 7 / 29 - partial error 0.2114 - partial loss 0.4423 - partial MRR  0.0000 - partial MAP 0.8124
+INFO:root:TEST batch 7 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 7 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 7 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 7 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 7 / 29 - Batch time 0 
+INFO:root:TEST batch 8 / 29 - partial error 0.1926 - partial loss 0.3900 - partial MRR  0.0000 - partial MAP 0.8291
+INFO:root:TEST batch 8 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 8 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - Batch time 0 
+INFO:root:TEST batch 9 / 29 - partial error 0.1871 - partial loss 0.3498 - partial MRR  0.0000 - partial MAP 0.8340
+INFO:root:TEST batch 9 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 9 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - Batch time 0 
+INFO:root:TEST batch 10 / 29 - partial error 0.1414 - partial loss 0.3200 - partial MRR  0.0000 - partial MAP 0.8784
+INFO:root:TEST batch 10 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(102, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 10 / 29 - measures partial microavg - precision 0.9808 - recall 0.9808 - f1 0.9808 
+INFO:root:TEST batch 10 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 10 / 29 - measures partial for class 1 - precision 0.9808 - recall 1.0000 - f1 0.9903 
+INFO:root:TEST batch 10 / 29 - Batch time 0 
+INFO:root:TEST batch 11 / 29 - partial error 0.1381 - partial loss 0.3064 - partial MRR  0.0000 - partial MAP 0.8862
+INFO:root:TEST batch 11 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(34, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 11 / 29 - measures partial microavg - precision 0.8947 - recall 0.8947 - f1 0.8947 
+INFO:root:TEST batch 11 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 11 / 29 - measures partial for class 1 - precision 0.8947 - recall 1.0000 - f1 0.9444 
+INFO:root:TEST batch 11 / 29 - Batch time 0 
+INFO:root:TEST batch 12 / 29 - partial error 0.1447 - partial loss 0.3024 - partial MRR  0.0000 - partial MAP 0.8874
+INFO:root:TEST batch 12 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(40, device='cuda:0')},fn {0: tensor(10, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')}
+INFO:root:TEST batch 12 / 29 - measures partial microavg - precision 0.8000 - recall 0.8000 - f1 0.8000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 1 - precision 0.8000 - recall 1.0000 - f1 0.8889 
+INFO:root:TEST batch 12 / 29 - Batch time 0 
+INFO:root:TEST batch 13 / 29 - partial error 0.1494 - partial loss 0.3147 - partial MRR  0.0000 - partial MAP 0.8838
+INFO:root:TEST batch 13 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 13 / 29 - measures partial microavg - precision 0.6667 - recall 0.6667 - f1 0.6667 
+INFO:root:TEST batch 13 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 13 / 29 - measures partial for class 1 - precision 0.6667 - recall 1.0000 - f1 0.8000 
+INFO:root:TEST batch 13 / 29 - Batch time 0 
+INFO:root:TEST batch 14 / 29 - partial error 0.1423 - partial loss 0.3001 - partial MRR  0.0000 - partial MAP 0.8911
+INFO:root:TEST batch 14 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(36, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 14 / 29 - measures partial microavg - precision 0.9474 - recall 0.9474 - f1 0.9474 
+INFO:root:TEST batch 14 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 14 / 29 - measures partial for class 1 - precision 0.9474 - recall 1.0000 - f1 0.9730 
+INFO:root:TEST batch 14 / 29 - Batch time 0 
+INFO:root:TEST batch 15 / 29 - partial error 0.1350 - partial loss 0.2821 - partial MRR  0.0000 - partial MAP 0.8967
+INFO:root:TEST batch 15 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 15 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - Batch time 0 
+INFO:root:TEST batch 16 / 29 - partial error 0.1294 - partial loss 0.2676 - partial MRR  0.0000 - partial MAP 0.9010
+INFO:root:TEST batch 16 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 16 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - Batch time 0 
+INFO:root:TEST batch 17 / 29 - partial error 0.1279 - partial loss 0.2644 - partial MRR  0.0000 - partial MAP 0.9001
+INFO:root:TEST batch 17 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 17 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 17 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 17 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 17 / 29 - Batch time 0 
+INFO:root:TEST batch 18 / 29 - partial error 0.1296 - partial loss 0.2682 - partial MRR  0.0000 - partial MAP 0.9014
+INFO:root:TEST batch 18 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 18 / 29 - measures partial microavg - precision 0.7500 - recall 0.7500 - f1 0.7500 
+INFO:root:TEST batch 18 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 18 / 29 - measures partial for class 1 - precision 0.7500 - recall 1.0000 - f1 0.8571 
+INFO:root:TEST batch 18 / 29 - Batch time 0 
+INFO:root:TEST batch 19 / 29 - partial error 0.1274 - partial loss 0.2635 - partial MRR  0.0000 - partial MAP 0.9047
+INFO:root:TEST batch 19 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 19 / 29 - measures partial microavg - precision 0.9231 - recall 0.9231 - f1 0.9231 
+INFO:root:TEST batch 19 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 19 / 29 - measures partial for class 1 - precision 0.9231 - recall 1.0000 - f1 0.9600 
+INFO:root:TEST batch 19 / 29 - Batch time 0 
+INFO:root:TEST batch 20 / 29 - partial error 0.1262 - partial loss 0.2589 - partial MRR  0.0000 - partial MAP 0.9073
+INFO:root:TEST batch 20 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 20 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 20 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 20 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 20 / 29 - Batch time 0 
+INFO:root:TEST batch 21 / 29 - partial error 0.1250 - partial loss 0.2573 - partial MRR  0.0000 - partial MAP 0.9055
+INFO:root:TEST batch 21 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 21 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 21 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 21 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 21 / 29 - Batch time 0 
+INFO:root:TEST batch 22 / 29 - partial error 0.1228 - partial loss 0.2481 - partial MRR  0.0000 - partial MAP 0.9072
+INFO:root:TEST batch 22 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 22 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - Batch time 0 
+INFO:root:TEST batch 23 / 29 - partial error 0.1218 - partial loss 0.2462 - partial MRR  0.0000 - partial MAP 0.9070
+INFO:root:TEST batch 23 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 23 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 23 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 23 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 23 / 29 - Batch time 0 
+INFO:root:TEST batch 24 / 29 - partial error 0.1211 - partial loss 0.2411 - partial MRR  0.0000 - partial MAP 0.9075
+INFO:root:TEST batch 24 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 24 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - Batch time 0 
+INFO:root:TEST batch 25 / 29 - partial error 0.1198 - partial loss 0.2355 - partial MRR  0.0000 - partial MAP 0.9086
+INFO:root:TEST batch 25 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 25 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - Batch time 0 
+INFO:root:TEST batch 26 / 29 - partial error 0.1205 - partial loss 0.2337 - partial MRR  0.0000 - partial MAP 0.9095
+INFO:root:TEST batch 26 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 26 / 29 - measures partial microavg - precision 0.8333 - recall 0.8333 - f1 0.8333 
+INFO:root:TEST batch 26 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 26 / 29 - measures partial for class 1 - precision 0.8333 - recall 1.0000 - f1 0.9091 
+INFO:root:TEST batch 26 / 29 - Batch time 0 
+INFO:root:TEST batch 27 / 29 - partial error 0.1339 - partial loss 0.2386 - partial MRR  0.0000 - partial MAP 0.8990
+INFO:root:TEST batch 27 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(14, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')}
+INFO:root:TEST batch 27 / 29 - measures partial microavg - precision 0.5625 - recall 0.5625 - f1 0.5625 
+INFO:root:TEST batch 27 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 27 / 29 - measures partial for class 1 - precision 0.5625 - recall 1.0000 - f1 0.7200 
+INFO:root:TEST batch 27 / 29 - Batch time 0 
+INFO:root:TEST batch 28 / 29 - partial error 0.1335 - partial loss 0.2366 - partial MRR  0.0000 - partial MAP 0.8970
+INFO:root:TEST batch 28 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 28 / 29 - measures partial microavg - precision 0.8750 - recall 0.8750 - f1 0.8750 
+INFO:root:TEST batch 28 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 28 / 29 - measures partial for class 1 - precision 0.8750 - recall 1.0000 - f1 0.9333 
+INFO:root:TEST batch 28 / 29 - Batch time 0 
+INFO:root:TEST batch 29 / 29 - partial error 0.1320 - partial loss 0.2335 - partial MRR  0.0000 - partial MAP 0.8992
+INFO:root:TEST batch 29 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 29 / 29 - measures partial microavg - precision 0.9167 - recall 0.9167 - f1 0.9167 
+INFO:root:TEST batch 29 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 29 / 29 - measures partial for class 1 - precision 0.9167 - recall 1.0000 - f1 0.9565 
+INFO:root:TEST batch 29 / 29 - Batch time 0 
+INFO:root:TEST mean losses tensor(0.2335, device='cuda:0')
+INFO:root:TEST mean errors 0.13202933967113495
+INFO:root:TEST mean MRR 0.0 - mean MAP 0.8992388370843489
+INFO:root:TEST tp {0: tensor(0, device='cuda:0'), 1: tensor(710, device='cuda:0')},fn {0: tensor(108, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(108, device='cuda:0')}
+INFO:root:TEST measures microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST measures@10 microavg - precision 0.8849 - recall 0.3007 - f1 0.4489 
+INFO:root:TEST measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@10 for class 1 - precision 0.8849 - recall 0.3465 - f1 0.4980 
+INFO:root:TEST measures@100 microavg - precision 0.8673 - recall 0.8631 - f1 0.8652 
+INFO:root:TEST measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@100 for class 1 - precision 0.8673 - recall 0.9944 - f1 0.9265 
+INFO:root:TEST measures@1000 microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@1000 for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST Total epoch time: 1.90315688000004
+INFO:root:################ TRAIN epoch 9 ###################
+INFO:root:TRAIN mean losses tensor(0.1466, device='cuda:0')
+INFO:root:TRAIN mean errors 0.0887017548084259
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.9366690733967372
+INFO:root:TRAIN tp {0: tensor(2, device='cuda:0'), 1: tensor(25970, device='cuda:0')},fn {0: tensor(2482, device='cuda:0'), 1: tensor(46, device='cuda:0')},fp {0: tensor(46, device='cuda:0'), 1: tensor(2482, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.9113 - recall 0.9113 - f1 0.9113 
+INFO:root:TRAIN measures for class 0 - precision 0.0417 - recall 0.0008 - f1 0.0016 
+INFO:root:TRAIN measures for class 1 - precision 0.9128 - recall 0.9982 - f1 0.9536 
+INFO:root:TRAIN measures@10 microavg - precision 0.9406 - recall 0.0289 - f1 0.0561 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.0769 - recall 0.0008 - f1 0.0016 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.9671 - recall 0.0316 - f1 0.0612 
+INFO:root:TRAIN measures@100 microavg - precision 0.9270 - recall 0.2780 - f1 0.4278 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.0417 - recall 0.0008 - f1 0.0016 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.9320 - recall 0.3045 - f1 0.4590 
+INFO:root:TRAIN measures@1000 microavg - precision 0.9093 - recall 0.8791 - f1 0.8939 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.0417 - recall 0.0008 - f1 0.0016 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.9108 - recall 0.9629 - f1 0.9361 
+INFO:root:TRAIN Total epoch time: 10.134081098000024
+INFO:root:################ VALID epoch 9 ###################
+INFO:root:VALID mean losses tensor(0.3161, device='cuda:0')
+INFO:root:VALID mean errors 0.18522484600543976
+INFO:root:VALID mean MRR 0.0 - mean MAP 0.8226729666346837
+INFO:root:VALID tp {0: tensor(0, device='cuda:0'), 1: tensor(1522, device='cuda:0')},fn {0: tensor(346, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(346, device='cuda:0')}
+INFO:root:VALID measures microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID measures@10 microavg - precision 0.8385 - recall 0.0584 - f1 0.1091 
+INFO:root:VALID measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@10 for class 1 - precision 0.8385 - recall 0.0716 - f1 0.1320 
+INFO:root:VALID measures@100 microavg - precision 0.8336 - recall 0.5712 - f1 0.6779 
+INFO:root:VALID measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@100 for class 1 - precision 0.8336 - recall 0.7011 - f1 0.7616 
+INFO:root:VALID measures@1000 microavg - precision 0.8148 - recall 0.8148 - f1 0.8148 
+INFO:root:VALID measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@1000 for class 1 - precision 0.8148 - recall 1.0000 - f1 0.8979 
+INFO:root:VALID Total epoch time: 0.8499286719999759
+INFO:root:################ TEST epoch 9 ###################
+INFO:root:TEST batch 1 / 29 - partial error 0.2444 - partial loss 0.5702 - partial MRR  0.0000 - partial MAP 0.9043
+INFO:root:TEST batch 1 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(68, device='cuda:0')},fn {0: tensor(22, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')}
+INFO:root:TEST batch 1 / 29 - measures partial microavg - precision 0.7556 - recall 0.7556 - f1 0.7556 
+INFO:root:TEST batch 1 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 1 / 29 - measures partial for class 1 - precision 0.7556 - recall 1.0000 - f1 0.8608 
+INFO:root:TEST batch 1 / 29 - Batch time 0 
+INFO:root:TEST batch 2 / 29 - partial error 0.2090 - partial loss 0.4517 - partial MRR  0.0000 - partial MAP 0.8934
+INFO:root:TEST batch 2 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(38, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 2 / 29 - measures partial microavg - precision 0.8636 - recall 0.8636 - f1 0.8636 
+INFO:root:TEST batch 2 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 2 / 29 - measures partial for class 1 - precision 0.8636 - recall 1.0000 - f1 0.9268 
+INFO:root:TEST batch 2 / 29 - Batch time 0 
+INFO:root:TEST batch 3 / 29 - partial error 0.2500 - partial loss 0.9841 - partial MRR  0.0000 - partial MAP 0.8237
+INFO:root:TEST batch 3 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')},fn {0: tensor(12, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')}
+INFO:root:TEST batch 3 / 29 - measures partial microavg - precision 0.5385 - recall 0.5385 - f1 0.5385 
+INFO:root:TEST batch 3 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 3 / 29 - measures partial for class 1 - precision 0.5385 - recall 1.0000 - f1 0.7000 
+INFO:root:TEST batch 3 / 29 - Batch time 0 
+INFO:root:TEST batch 4 / 29 - partial error 0.2323 - partial loss 0.8664 - partial MRR  0.0000 - partial MAP 0.8267
+INFO:root:TEST batch 4 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(32, device='cuda:0')},fn {0: tensor(6, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')}
+INFO:root:TEST batch 4 / 29 - measures partial microavg - precision 0.8421 - recall 0.8421 - f1 0.8421 
+INFO:root:TEST batch 4 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 4 / 29 - measures partial for class 1 - precision 0.8421 - recall 1.0000 - f1 0.9143 
+INFO:root:TEST batch 4 / 29 - Batch time 0 
+INFO:root:TEST batch 5 / 29 - partial error 0.2202 - partial loss 0.7403 - partial MRR  0.0000 - partial MAP 0.8212
+INFO:root:TEST batch 5 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 5 / 29 - measures partial microavg - precision 0.9000 - recall 0.9000 - f1 0.9000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 5 / 29 - measures partial for class 1 - precision 0.9000 - recall 1.0000 - f1 0.9474 
+INFO:root:TEST batch 5 / 29 - Batch time 0 
+INFO:root:TEST batch 6 / 29 - partial error 0.2155 - partial loss 0.6526 - partial MRR  0.0000 - partial MAP 0.8313
+INFO:root:TEST batch 6 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 6 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 6 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 6 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 6 / 29 - Batch time 0 
+INFO:root:TEST batch 7 / 29 - partial error 0.2114 - partial loss 0.6010 - partial MRR  0.0000 - partial MAP 0.8243
+INFO:root:TEST batch 7 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 7 / 29 - measures partial microavg - precision 0.8571 - recall 0.8571 - f1 0.8571 
+INFO:root:TEST batch 7 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 7 / 29 - measures partial for class 1 - precision 0.8571 - recall 1.0000 - f1 0.9231 
+INFO:root:TEST batch 7 / 29 - Batch time 0 
+INFO:root:TEST batch 8 / 29 - partial error 0.1926 - partial loss 0.5274 - partial MRR  0.0000 - partial MAP 0.8399
+INFO:root:TEST batch 8 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 8 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 8 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 8 / 29 - Batch time 0 
+INFO:root:TEST batch 9 / 29 - partial error 0.1871 - partial loss 0.4704 - partial MRR  0.0000 - partial MAP 0.8445
+INFO:root:TEST batch 9 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 9 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 9 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 9 / 29 - Batch time 0 
+INFO:root:TEST batch 10 / 29 - partial error 0.1414 - partial loss 0.4292 - partial MRR  0.0000 - partial MAP 0.8864
+INFO:root:TEST batch 10 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(102, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 10 / 29 - measures partial microavg - precision 0.9808 - recall 0.9808 - f1 0.9808 
+INFO:root:TEST batch 10 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 10 / 29 - measures partial for class 1 - precision 0.9808 - recall 1.0000 - f1 0.9903 
+INFO:root:TEST batch 10 / 29 - Batch time 0 
+INFO:root:TEST batch 11 / 29 - partial error 0.1381 - partial loss 0.4106 - partial MRR  0.0000 - partial MAP 0.8906
+INFO:root:TEST batch 11 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(34, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 11 / 29 - measures partial microavg - precision 0.8947 - recall 0.8947 - f1 0.8947 
+INFO:root:TEST batch 11 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 11 / 29 - measures partial for class 1 - precision 0.8947 - recall 1.0000 - f1 0.9444 
+INFO:root:TEST batch 11 / 29 - Batch time 0 
+INFO:root:TEST batch 12 / 29 - partial error 0.1447 - partial loss 0.4019 - partial MRR  0.0000 - partial MAP 0.8938
+INFO:root:TEST batch 12 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(40, device='cuda:0')},fn {0: tensor(10, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')}
+INFO:root:TEST batch 12 / 29 - measures partial microavg - precision 0.8000 - recall 0.8000 - f1 0.8000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 12 / 29 - measures partial for class 1 - precision 0.8000 - recall 1.0000 - f1 0.8889 
+INFO:root:TEST batch 12 / 29 - Batch time 0 
+INFO:root:TEST batch 13 / 29 - partial error 0.1494 - partial loss 0.4126 - partial MRR  0.0000 - partial MAP 0.8857
+INFO:root:TEST batch 13 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 13 / 29 - measures partial microavg - precision 0.6667 - recall 0.6667 - f1 0.6667 
+INFO:root:TEST batch 13 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 13 / 29 - measures partial for class 1 - precision 0.6667 - recall 1.0000 - f1 0.8000 
+INFO:root:TEST batch 13 / 29 - Batch time 0 
+INFO:root:TEST batch 14 / 29 - partial error 0.1423 - partial loss 0.3906 - partial MRR  0.0000 - partial MAP 0.8931
+INFO:root:TEST batch 14 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(36, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 14 / 29 - measures partial microavg - precision 0.9474 - recall 0.9474 - f1 0.9474 
+INFO:root:TEST batch 14 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 14 / 29 - measures partial for class 1 - precision 0.9474 - recall 1.0000 - f1 0.9730 
+INFO:root:TEST batch 14 / 29 - Batch time 0 
+INFO:root:TEST batch 15 / 29 - partial error 0.1350 - partial loss 0.3658 - partial MRR  0.0000 - partial MAP 0.8986
+INFO:root:TEST batch 15 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 15 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 15 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 15 / 29 - Batch time 0 
+INFO:root:TEST batch 16 / 29 - partial error 0.1294 - partial loss 0.3446 - partial MRR  0.0000 - partial MAP 0.9029
+INFO:root:TEST batch 16 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 16 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 16 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 16 / 29 - Batch time 0 
+INFO:root:TEST batch 17 / 29 - partial error 0.1279 - partial loss 0.3392 - partial MRR  0.0000 - partial MAP 0.9029
+INFO:root:TEST batch 17 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 17 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 17 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 17 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 17 / 29 - Batch time 0 
+INFO:root:TEST batch 18 / 29 - partial error 0.1296 - partial loss 0.3450 - partial MRR  0.0000 - partial MAP 0.8987
+INFO:root:TEST batch 18 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(6, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 18 / 29 - measures partial microavg - precision 0.7500 - recall 0.7500 - f1 0.7500 
+INFO:root:TEST batch 18 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 18 / 29 - measures partial for class 1 - precision 0.7500 - recall 1.0000 - f1 0.8571 
+INFO:root:TEST batch 18 / 29 - Batch time 0 
+INFO:root:TEST batch 19 / 29 - partial error 0.1274 - partial loss 0.3388 - partial MRR  0.0000 - partial MAP 0.9024
+INFO:root:TEST batch 19 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(24, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 19 / 29 - measures partial microavg - precision 0.9231 - recall 0.9231 - f1 0.9231 
+INFO:root:TEST batch 19 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 19 / 29 - measures partial for class 1 - precision 0.9231 - recall 1.0000 - f1 0.9600 
+INFO:root:TEST batch 19 / 29 - Batch time 0 
+INFO:root:TEST batch 20 / 29 - partial error 0.1262 - partial loss 0.3320 - partial MRR  0.0000 - partial MAP 0.9050
+INFO:root:TEST batch 20 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 20 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 20 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 20 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 20 / 29 - Batch time 0 
+INFO:root:TEST batch 21 / 29 - partial error 0.1250 - partial loss 0.3292 - partial MRR  0.0000 - partial MAP 0.9047
+INFO:root:TEST batch 21 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 21 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 21 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 21 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 21 / 29 - Batch time 0 
+INFO:root:TEST batch 22 / 29 - partial error 0.1228 - partial loss 0.3151 - partial MRR  0.0000 - partial MAP 0.9064
+INFO:root:TEST batch 22 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(12, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 22 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 22 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 22 / 29 - Batch time 0 
+INFO:root:TEST batch 23 / 29 - partial error 0.1218 - partial loss 0.3117 - partial MRR  0.0000 - partial MAP 0.9054
+INFO:root:TEST batch 23 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(20, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 23 / 29 - measures partial microavg - precision 0.9091 - recall 0.9091 - f1 0.9091 
+INFO:root:TEST batch 23 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 23 / 29 - measures partial for class 1 - precision 0.9091 - recall 1.0000 - f1 0.9524 
+INFO:root:TEST batch 23 / 29 - Batch time 0 
+INFO:root:TEST batch 24 / 29 - partial error 0.1211 - partial loss 0.3013 - partial MRR  0.0000 - partial MAP 0.9060
+INFO:root:TEST batch 24 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 24 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 24 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 24 / 29 - Batch time 0 
+INFO:root:TEST batch 25 / 29 - partial error 0.1198 - partial loss 0.2916 - partial MRR  0.0000 - partial MAP 0.9070
+INFO:root:TEST batch 25 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(8, device='cuda:0')},fn {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(0, device='cuda:0')}
+INFO:root:TEST batch 25 / 29 - measures partial microavg - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 25 / 29 - measures partial for class 1 - precision 1.0000 - recall 1.0000 - f1 1.0000 
+INFO:root:TEST batch 25 / 29 - Batch time 0 
+INFO:root:TEST batch 26 / 29 - partial error 0.1205 - partial loss 0.2879 - partial MRR  0.0000 - partial MAP 0.9080
+INFO:root:TEST batch 26 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(10, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 26 / 29 - measures partial microavg - precision 0.8333 - recall 0.8333 - f1 0.8333 
+INFO:root:TEST batch 26 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 26 / 29 - measures partial for class 1 - precision 0.8333 - recall 1.0000 - f1 0.9091 
+INFO:root:TEST batch 26 / 29 - Batch time 0 
+INFO:root:TEST batch 27 / 29 - partial error 0.1339 - partial loss 0.2914 - partial MRR  0.0000 - partial MAP 0.8952
+INFO:root:TEST batch 27 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(18, device='cuda:0')},fn {0: tensor(14, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(14, device='cuda:0')}
+INFO:root:TEST batch 27 / 29 - measures partial microavg - precision 0.5625 - recall 0.5625 - f1 0.5625 
+INFO:root:TEST batch 27 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 27 / 29 - measures partial for class 1 - precision 0.5625 - recall 1.0000 - f1 0.7200 
+INFO:root:TEST batch 27 / 29 - Batch time 0 
+INFO:root:TEST batch 28 / 29 - partial error 0.1335 - partial loss 0.2875 - partial MRR  0.0000 - partial MAP 0.8933
+INFO:root:TEST batch 28 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(28, device='cuda:0')},fn {0: tensor(4, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(4, device='cuda:0')}
+INFO:root:TEST batch 28 / 29 - measures partial microavg - precision 0.8750 - recall 0.8750 - f1 0.8750 
+INFO:root:TEST batch 28 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 28 / 29 - measures partial for class 1 - precision 0.8750 - recall 1.0000 - f1 0.9333 
+INFO:root:TEST batch 28 / 29 - Batch time 0 
+INFO:root:TEST batch 29 / 29 - partial error 0.1320 - partial loss 0.2826 - partial MRR  0.0000 - partial MAP 0.8964
+INFO:root:TEST batch 29 / 29 -  partial tp {0: tensor(0, device='cuda:0'), 1: tensor(22, device='cuda:0')},fn {0: tensor(2, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(2, device='cuda:0')}
+INFO:root:TEST batch 29 / 29 - measures partial microavg - precision 0.9167 - recall 0.9167 - f1 0.9167 
+INFO:root:TEST batch 29 / 29 - measures partial for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST batch 29 / 29 - measures partial for class 1 - precision 0.9167 - recall 1.0000 - f1 0.9565 
+INFO:root:TEST batch 29 / 29 - Batch time 0 
+INFO:root:TEST mean losses tensor(0.2826, device='cuda:0')
+INFO:root:TEST mean errors 0.13202933967113495
+INFO:root:TEST mean MRR 0.0 - mean MAP 0.8964110764640596
+INFO:root:TEST tp {0: tensor(0, device='cuda:0'), 1: tensor(710, device='cuda:0')},fn {0: tensor(108, device='cuda:0'), 1: tensor(0, device='cuda:0')},fp {0: tensor(0, device='cuda:0'), 1: tensor(108, device='cuda:0')}
+INFO:root:TEST measures microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST measures@10 microavg - precision 0.8705 - recall 0.2958 - f1 0.4416 
+INFO:root:TEST measures@10 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@10 for class 1 - precision 0.8705 - recall 0.3408 - f1 0.4899 
+INFO:root:TEST measures@100 microavg - precision 0.8673 - recall 0.8631 - f1 0.8652 
+INFO:root:TEST measures@100 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@100 for class 1 - precision 0.8673 - recall 0.9944 - f1 0.9265 
+INFO:root:TEST measures@1000 microavg - precision 0.8680 - recall 0.8680 - f1 0.8680 
+INFO:root:TEST measures@1000 for class 0 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:TEST measures@1000 for class 1 - precision 0.8680 - recall 1.0000 - f1 0.9293 
+INFO:root:TEST Total epoch time: 1.934709306000002

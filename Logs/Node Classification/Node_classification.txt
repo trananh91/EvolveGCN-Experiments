@@ -1,0 +1,1058 @@
+The preprocessed data already exists, skip the preprocess stage!
+Train Epoch 0 | class 1 | precision:0.3262 | recall: 0.2860 | f1: 0.3047
+Eval Epoch 0 | class 1 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+###################Epoch 0 Test###################
+  Test | Time 37 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 38 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 39 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 40 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 41 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 42 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 0 | class 1 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+Train Epoch 1 | class 1 | precision:0.4123 | recall: 0.4449 | f1: 0.4280
+Eval Epoch 1 | class 1 | precision:0.5953 | recall: 0.4554 | f1: 0.5161
+###################Epoch 1 Test###################
+  Test | Time 37 | precision:0.4286 | recall: 0.1500 | f1: 0.2222
+  Test | Time 38 | precision:0.6296 | recall: 0.1532 | f1: 0.2464
+  Test | Time 39 | precision:0.5517 | recall: 0.1975 | f1: 0.2909
+  Test | Time 40 | precision:0.1429 | recall: 0.0089 | f1: 0.0168
+  Test | Time 41 | precision:0.5926 | recall: 0.1379 | f1: 0.2238
+  Test | Time 42 | precision:0.7647 | recall: 0.1632 | f1: 0.2690
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 1 | class 1 | precision:0.5337 | recall: 0.1094 | f1: 0.1816
+Train Epoch 2 | class 1 | precision:0.5297 | recall: 0.4368 | f1: 0.4788
+Eval Epoch 2 | class 1 | precision:0.4912 | recall: 0.5900 | f1: 0.5361
+###################Epoch 2 Test###################
+  Test | Time 37 | precision:0.3333 | recall: 0.1500 | f1: 0.2069
+  Test | Time 38 | precision:0.3500 | recall: 0.1892 | f1: 0.2456
+  Test | Time 39 | precision:0.2615 | recall: 0.2099 | f1: 0.2329
+  Test | Time 40 | precision:0.4074 | recall: 0.0982 | f1: 0.1583
+  Test | Time 41 | precision:0.5161 | recall: 0.2759 | f1: 0.3596
+  Test | Time 42 | precision:0.7500 | recall: 0.3766 | f1: 0.5014
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.2000 | recall: 0.0278 | f1: 0.0488
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 2 | class 1 | precision:0.3272 | recall: 0.2051 | f1: 0.2521
+Train Epoch 3 | class 1 | precision:0.4995 | recall: 0.7399 | f1: 0.5964
+Eval Epoch 3 | class 1 | precision:0.3796 | recall: 0.8282 | f1: 0.5206
+Train Epoch 4 | class 1 | precision:0.5572 | recall: 0.6774 | f1: 0.6115
+Eval Epoch 4 | class 1 | precision:0.3989 | recall: 0.8152 | f1: 0.5357
+Train Epoch 5 | class 1 | precision:0.5548 | recall: 0.7386 | f1: 0.6336
+Eval Epoch 5 | class 1 | precision:0.4547 | recall: 0.7407 | f1: 0.5635
+###################Epoch 5 Test###################
+  Test | Time 37 | precision:0.4694 | recall: 0.5750 | f1: 0.5169
+  Test | Time 38 | precision:0.6471 | recall: 0.6937 | f1: 0.6696
+  Test | Time 39 | precision:0.2530 | recall: 0.5185 | f1: 0.3401
+  Test | Time 40 | precision:0.3796 | recall: 0.3661 | f1: 0.3727
+  Test | Time 41 | precision:0.4078 | recall: 0.6293 | f1: 0.4949
+  Test | Time 42 | precision:0.6292 | recall: 0.7029 | f1: 0.6640
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0056 | recall: 0.0833 | f1: 0.0105
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0244 | recall: 0.5000 | f1: 0.0465
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.3529 | recall: 0.1667 | f1: 0.2264
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 5 | class 1 | precision:0.2819 | recall: 0.4988 | f1: 0.3602
+Train Epoch 6 | class 1 | precision:0.7011 | recall: 0.6811 | f1: 0.6910
+Eval Epoch 6 | class 1 | precision:0.5677 | recall: 0.5981 | f1: 0.5825
+###################Epoch 6 Test###################
+  Test | Time 37 | precision:0.4091 | recall: 0.2250 | f1: 0.2903
+  Test | Time 38 | precision:0.6190 | recall: 0.3514 | f1: 0.4483
+  Test | Time 39 | precision:0.3125 | recall: 0.3086 | f1: 0.3106
+  Test | Time 40 | precision:0.5429 | recall: 0.1696 | f1: 0.2585
+  Test | Time 41 | precision:0.5857 | recall: 0.3534 | f1: 0.4409
+  Test | Time 42 | precision:0.7761 | recall: 0.4351 | f1: 0.5576
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0095 | recall: 0.0417 | f1: 0.0155
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.1429 | recall: 0.5000 | f1: 0.2222
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.6000 | recall: 0.0833 | f1: 0.1463
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 6 | class 1 | precision:0.4321 | recall: 0.2788 | f1: 0.3389
+Train Epoch 7 | class 1 | precision:0.6346 | recall: 0.6962 | f1: 0.6640
+Eval Epoch 7 | class 1 | precision:0.4626 | recall: 0.8023 | f1: 0.5868
+###################Epoch 7 Test###################
+  Test | Time 37 | precision:0.3333 | recall: 0.6750 | f1: 0.4463
+  Test | Time 38 | precision:0.3865 | recall: 0.7207 | f1: 0.5031
+  Test | Time 39 | precision:0.2403 | recall: 0.4568 | f1: 0.3149
+  Test | Time 40 | precision:0.3130 | recall: 0.3661 | f1: 0.3374
+  Test | Time 41 | precision:0.3091 | recall: 0.5862 | f1: 0.4048
+  Test | Time 42 | precision:0.6055 | recall: 0.6485 | f1: 0.6263
+  Test | Time 43 | precision:0.0233 | recall: 0.0833 | f1: 0.0364
+  Test | Time 44 | precision:0.0089 | recall: 0.0833 | f1: 0.0161
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0357 | recall: 0.5000 | f1: 0.0667
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.3333 | recall: 0.1111 | f1: 0.1667
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 7 | class 1 | precision:0.2778 | recall: 0.4804 | f1: 0.3520
+Train Epoch 8 | class 1 | precision:0.6413 | recall: 0.7419 | f1: 0.6880
+Eval Epoch 8 | class 1 | precision:0.4034 | recall: 0.8395 | f1: 0.5450
+Train Epoch 9 | class 1 | precision:0.6951 | recall: 0.7752 | f1: 0.7330
+Eval Epoch 9 | class 1 | precision:0.5362 | recall: 0.7439 | f1: 0.6232
+###################Epoch 9 Test###################
+  Test | Time 37 | precision:0.4419 | recall: 0.4750 | f1: 0.4578
+  Test | Time 38 | precision:0.6174 | recall: 0.6396 | f1: 0.6283
+  Test | Time 39 | precision:0.2576 | recall: 0.4198 | f1: 0.3192
+  Test | Time 40 | precision:0.4231 | recall: 0.2946 | f1: 0.3474
+  Test | Time 41 | precision:0.4865 | recall: 0.4655 | f1: 0.4758
+  Test | Time 42 | precision:0.7150 | recall: 0.6192 | f1: 0.6637
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0057 | recall: 0.0417 | f1: 0.0100
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0556 | recall: 0.5000 | f1: 0.1000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.6667 | recall: 0.1111 | f1: 0.1905
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 9 | class 1 | precision:0.3747 | recall: 0.4205 | f1: 0.3963
+Train Epoch 10 | class 1 | precision:0.7360 | recall: 0.7053 | f1: 0.7203
+Eval Epoch 10 | class 1 | precision:0.6517 | recall: 0.5640 | f1: 0.6047
+Train Epoch 11 | class 1 | precision:0.7303 | recall: 0.7261 | f1: 0.7282
+Eval Epoch 11 | class 1 | precision:0.4229 | recall: 0.8574 | f1: 0.5664
+Train Epoch 12 | class 1 | precision:0.7215 | recall: 0.7940 | f1: 0.7560
+Eval Epoch 12 | class 1 | precision:0.4167 | recall: 0.8882 | f1: 0.5673
+Train Epoch 13 | class 1 | precision:0.7444 | recall: 0.7527 | f1: 0.7485
+Eval Epoch 13 | class 1 | precision:0.4451 | recall: 0.8541 | f1: 0.5852
+Train Epoch 14 | class 1 | precision:0.7598 | recall: 0.7843 | f1: 0.7718
+Eval Epoch 14 | class 1 | precision:0.4355 | recall: 0.8541 | f1: 0.5769
+Train Epoch 15 | class 1 | precision:0.7759 | recall: 0.7981 | f1: 0.7868
+Eval Epoch 15 | class 1 | precision:0.4857 | recall: 0.8250 | f1: 0.6114
+Train Epoch 16 | class 1 | precision:0.8021 | recall: 0.7560 | f1: 0.7784
+Eval Epoch 16 | class 1 | precision:0.4697 | recall: 0.8541 | f1: 0.6061
+Train Epoch 17 | class 1 | precision:0.7613 | recall: 0.8101 | f1: 0.7850
+Eval Epoch 17 | class 1 | precision:0.4179 | recall: 0.8833 | f1: 0.5674
+Train Epoch 18 | class 1 | precision:0.8154 | recall: 0.7776 | f1: 0.7960
+Eval Epoch 18 | class 1 | precision:0.4731 | recall: 0.8541 | f1: 0.6089
+Train Epoch 19 | class 1 | precision:0.7691 | recall: 0.8182 | f1: 0.7929
+Eval Epoch 19 | class 1 | precision:0.3884 | recall: 0.8914 | f1: 0.5411
+Train Epoch 20 | class 1 | precision:0.8061 | recall: 0.7960 | f1: 0.8010
+Eval Epoch 20 | class 1 | precision:0.4861 | recall: 0.8509 | f1: 0.6187
+Train Epoch 21 | class 1 | precision:0.7949 | recall: 0.8061 | f1: 0.8005
+Eval Epoch 21 | class 1 | precision:0.4346 | recall: 0.8784 | f1: 0.5815
+Train Epoch 22 | class 1 | precision:0.8073 | recall: 0.8065 | f1: 0.8069
+Eval Epoch 22 | class 1 | precision:0.4533 | recall: 0.8817 | f1: 0.5988
+Train Epoch 23 | class 1 | precision:0.8283 | recall: 0.7812 | f1: 0.8041
+Eval Epoch 23 | class 1 | precision:0.4904 | recall: 0.8687 | f1: 0.6269
+###################Epoch 23 Test###################
+  Test | Time 37 | precision:0.3085 | recall: 0.7250 | f1: 0.4328
+  Test | Time 38 | precision:0.3825 | recall: 0.8649 | f1: 0.5304
+  Test | Time 39 | precision:0.3632 | recall: 0.8519 | f1: 0.5092
+  Test | Time 40 | precision:0.4357 | recall: 0.5446 | f1: 0.4841
+  Test | Time 41 | precision:0.3723 | recall: 0.6034 | f1: 0.4605
+  Test | Time 42 | precision:0.5978 | recall: 0.6904 | f1: 0.6408
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0175 | recall: 0.1250 | f1: 0.0308
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0227 | recall: 0.5000 | f1: 0.0435
+  Test | Time 47 | precision:0.0370 | recall: 0.0455 | f1: 0.0408
+  Test | Time 48 | precision:0.3846 | recall: 0.1389 | f1: 0.2041
+  Test | Time 49 | precision:0.1154 | recall: 0.0536 | f1: 0.0732
+  Test | Epoch 23 | class 1 | precision:0.3138 | recall: 0.5795 | f1: 0.4071
+Train Epoch 24 | class 1 | precision:0.8122 | recall: 0.8253 | f1: 0.8187
+Eval Epoch 24 | class 1 | precision:0.4707 | recall: 0.8720 | f1: 0.6114
+Train Epoch 25 | class 1 | precision:0.8347 | recall: 0.7994 | f1: 0.8167
+Eval Epoch 25 | class 1 | precision:0.4844 | recall: 0.8833 | f1: 0.6257
+Train Epoch 26 | class 1 | precision:0.8234 | recall: 0.8384 | f1: 0.8308
+Eval Epoch 26 | class 1 | precision:0.5325 | recall: 0.8363 | f1: 0.6507
+###################Epoch 26 Test###################
+  Test | Time 37 | precision:0.4590 | recall: 0.7000 | f1: 0.5545
+  Test | Time 38 | precision:0.4413 | recall: 0.8468 | f1: 0.5802
+  Test | Time 39 | precision:0.4359 | recall: 0.8395 | f1: 0.5738
+  Test | Time 40 | precision:0.4921 | recall: 0.5536 | f1: 0.5210
+  Test | Time 41 | precision:0.4631 | recall: 0.5948 | f1: 0.5208
+  Test | Time 42 | precision:0.7227 | recall: 0.6653 | f1: 0.6928
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0280 | recall: 0.1250 | f1: 0.0458
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0417 | recall: 0.5000 | f1: 0.0769
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.6667 | recall: 0.0556 | f1: 0.1026
+  Test | Time 49 | precision:0.1176 | recall: 0.0357 | f1: 0.0548
+  Test | Epoch 26 | class 1 | precision:0.4070 | recall: 0.5622 | f1: 0.4722
+Train Epoch 27 | class 1 | precision:0.8419 | recall: 0.8122 | f1: 0.8267
+Eval Epoch 27 | class 1 | precision:0.5571 | recall: 0.8541 | f1: 0.6743
+###################Epoch 27 Test###################
+  Test | Time 37 | precision:0.3729 | recall: 0.5500 | f1: 0.4444
+  Test | Time 38 | precision:0.3982 | recall: 0.7928 | f1: 0.5301
+  Test | Time 39 | precision:0.3939 | recall: 0.6420 | f1: 0.4883
+  Test | Time 40 | precision:0.5534 | recall: 0.5089 | f1: 0.5302
+  Test | Time 41 | precision:0.4361 | recall: 0.5000 | f1: 0.4659
+  Test | Time 42 | precision:0.7451 | recall: 0.6360 | f1: 0.6862
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0333 | recall: 0.0833 | f1: 0.0476
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0476 | recall: 0.5000 | f1: 0.0870
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:1.0000 | recall: 0.0556 | f1: 0.1053
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 27 | class 1 | precision:0.4114 | recall: 0.5000 | f1: 0.4514
+Train Epoch 28 | class 1 | precision:0.8365 | recall: 0.8353 | f1: 0.8359
+Eval Epoch 28 | class 1 | precision:0.6395 | recall: 0.7877 | f1: 0.7059
+###################Epoch 28 Test###################
+  Test | Time 37 | precision:0.5405 | recall: 0.5000 | f1: 0.5195
+  Test | Time 38 | precision:0.4855 | recall: 0.6036 | f1: 0.5382
+  Test | Time 39 | precision:0.4930 | recall: 0.4321 | f1: 0.4605
+  Test | Time 40 | precision:0.7200 | recall: 0.3214 | f1: 0.4444
+  Test | Time 41 | precision:0.7273 | recall: 0.4138 | f1: 0.5275
+  Test | Time 42 | precision:0.8939 | recall: 0.4937 | f1: 0.6361
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:1.0000 | recall: 0.0278 | f1: 0.0541
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 28 | class 1 | precision:0.5920 | recall: 0.3744 | f1: 0.4587
+Train Epoch 29 | class 1 | precision:0.8232 | recall: 0.8337 | f1: 0.8284
+Eval Epoch 29 | class 1 | precision:0.5605 | recall: 0.8039 | f1: 0.6605
+Train Epoch 30 | class 1 | precision:0.8247 | recall: 0.8427 | f1: 0.8336
+Eval Epoch 30 | class 1 | precision:0.6443 | recall: 0.8104 | f1: 0.7179
+###################Epoch 30 Test###################
+  Test | Time 37 | precision:0.5714 | recall: 0.5000 | f1: 0.5333
+  Test | Time 38 | precision:0.5347 | recall: 0.6937 | f1: 0.6039
+  Test | Time 39 | precision:0.5316 | recall: 0.5185 | f1: 0.5250
+  Test | Time 40 | precision:0.7407 | recall: 0.3571 | f1: 0.4819
+  Test | Time 41 | precision:0.8387 | recall: 0.4483 | f1: 0.5843
+  Test | Time 42 | precision:0.9435 | recall: 0.4895 | f1: 0.6446
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 30 | class 1 | precision:0.6654 | recall: 0.4009 | f1: 0.5004
+Train Epoch 31 | class 1 | precision:0.8259 | recall: 0.8434 | f1: 0.8346
+Eval Epoch 31 | class 1 | precision:0.6469 | recall: 0.7423 | f1: 0.6913
+Train Epoch 32 | class 1 | precision:0.8108 | recall: 0.8192 | f1: 0.8150
+Eval Epoch 32 | class 1 | precision:0.5785 | recall: 0.8120 | f1: 0.6757
+Train Epoch 33 | class 1 | precision:0.8352 | recall: 0.8448 | f1: 0.8400
+Eval Epoch 33 | class 1 | precision:0.5777 | recall: 0.8314 | f1: 0.6817
+Train Epoch 34 | class 1 | precision:0.7972 | recall: 0.8535 | f1: 0.8244
+Eval Epoch 34 | class 1 | precision:0.5990 | recall: 0.7601 | f1: 0.6700
+Train Epoch 35 | class 1 | precision:0.8372 | recall: 0.7829 | f1: 0.8092
+Eval Epoch 35 | class 1 | precision:0.6364 | recall: 0.6921 | f1: 0.6630
+Train Epoch 36 | class 1 | precision:0.8183 | recall: 0.8293 | f1: 0.8238
+Eval Epoch 36 | class 1 | precision:0.5918 | recall: 0.7990 | f1: 0.6800
+Train Epoch 37 | class 1 | precision:0.8288 | recall: 0.8343 | f1: 0.8315
+Eval Epoch 37 | class 1 | precision:0.5754 | recall: 0.7796 | f1: 0.6621
+Train Epoch 38 | class 1 | precision:0.8291 | recall: 0.8444 | f1: 0.8367
+Eval Epoch 38 | class 1 | precision:0.5276 | recall: 0.8379 | f1: 0.6475
+Train Epoch 39 | class 1 | precision:0.8286 | recall: 0.8444 | f1: 0.8364
+Eval Epoch 39 | class 1 | precision:0.4526 | recall: 0.8590 | f1: 0.5928
+Train Epoch 40 | class 1 | precision:0.8314 | recall: 0.8602 | f1: 0.8456
+Eval Epoch 40 | class 1 | precision:0.4664 | recall: 0.8671 | f1: 0.6066
+Train Epoch 41 | class 1 | precision:0.8145 | recall: 0.8693 | f1: 0.8410
+Eval Epoch 41 | class 1 | precision:0.4958 | recall: 0.8541 | f1: 0.6274
+Train Epoch 42 | class 1 | precision:0.8222 | recall: 0.8468 | f1: 0.8343
+Eval Epoch 42 | class 1 | precision:0.3940 | recall: 0.8914 | f1: 0.5464
+Train Epoch 43 | class 1 | precision:0.8272 | recall: 0.8720 | f1: 0.8490
+Eval Epoch 43 | class 1 | precision:0.5305 | recall: 0.8444 | f1: 0.6517
+Train Epoch 44 | class 1 | precision:0.7994 | recall: 0.8397 | f1: 0.8191
+Eval Epoch 44 | class 1 | precision:0.5324 | recall: 0.8379 | f1: 0.6511
+Train Epoch 45 | class 1 | precision:0.8298 | recall: 0.8565 | f1: 0.8429
+Eval Epoch 45 | class 1 | precision:0.4995 | recall: 0.8736 | f1: 0.6356
+Train Epoch 46 | class 1 | precision:0.8128 | recall: 0.8579 | f1: 0.8347
+Eval Epoch 46 | class 1 | precision:0.5635 | recall: 0.8558 | f1: 0.6795
+Train Epoch 47 | class 1 | precision:0.8394 | recall: 0.8639 | f1: 0.8515
+Eval Epoch 47 | class 1 | precision:0.5932 | recall: 0.8460 | f1: 0.6974
+Train Epoch 48 | class 1 | precision:0.8485 | recall: 0.8733 | f1: 0.8607
+Eval Epoch 48 | class 1 | precision:0.5691 | recall: 0.8671 | f1: 0.6872
+Train Epoch 49 | class 1 | precision:0.8421 | recall: 0.8891 | f1: 0.8650
+Eval Epoch 49 | class 1 | precision:0.5763 | recall: 0.8687 | f1: 0.6930
+Train Epoch 50 | class 1 | precision:0.8321 | recall: 0.8528 | f1: 0.8423
+Eval Epoch 50 | class 1 | precision:0.5102 | recall: 0.8947 | f1: 0.6498
+Train Epoch 51 | class 1 | precision:0.8141 | recall: 0.8861 | f1: 0.8486
+Eval Epoch 51 | class 1 | precision:0.4919 | recall: 0.8833 | f1: 0.6319
+Train Epoch 52 | class 1 | precision:0.8091 | recall: 0.8431 | f1: 0.8257
+Eval Epoch 52 | class 1 | precision:0.6068 | recall: 0.8104 | f1: 0.6940
+Train Epoch 53 | class 1 | precision:0.8320 | recall: 0.8585 | f1: 0.8450
+Eval Epoch 53 | class 1 | precision:0.5954 | recall: 0.8444 | f1: 0.6984
+Train Epoch 54 | class 1 | precision:0.8416 | recall: 0.8804 | f1: 0.8606
+Eval Epoch 54 | class 1 | precision:0.5791 | recall: 0.8720 | f1: 0.6960
+Train Epoch 55 | class 1 | precision:0.8358 | recall: 0.8861 | f1: 0.8602
+Eval Epoch 55 | class 1 | precision:0.6080 | recall: 0.8622 | f1: 0.7131
+Train Epoch 56 | class 1 | precision:0.8503 | recall: 0.8878 | f1: 0.8687
+Eval Epoch 56 | class 1 | precision:0.5602 | recall: 0.8898 | f1: 0.6875
+Train Epoch 57 | class 1 | precision:0.8438 | recall: 0.8911 | f1: 0.8668
+Eval Epoch 57 | class 1 | precision:0.4615 | recall: 0.8849 | f1: 0.6067
+Train Epoch 58 | class 1 | precision:0.8633 | recall: 0.8847 | f1: 0.8739
+Eval Epoch 58 | class 1 | precision:0.5761 | recall: 0.8347 | f1: 0.6817
+Train Epoch 59 | class 1 | precision:0.8637 | recall: 0.8985 | f1: 0.8808
+Eval Epoch 59 | class 1 | precision:0.5798 | recall: 0.8541 | f1: 0.6907
+Train Epoch 60 | class 1 | precision:0.8651 | recall: 0.9073 | f1: 0.8857
+Eval Epoch 60 | class 1 | precision:0.6545 | recall: 0.8444 | f1: 0.7374
+###################Epoch 60 Test###################
+  Test | Time 37 | precision:0.6098 | recall: 0.6250 | f1: 0.6173
+  Test | Time 38 | precision:0.5854 | recall: 0.8649 | f1: 0.6982
+  Test | Time 39 | precision:0.5776 | recall: 0.8272 | f1: 0.6802
+  Test | Time 40 | precision:0.5800 | recall: 0.5179 | f1: 0.5472
+  Test | Time 41 | precision:0.6869 | recall: 0.5862 | f1: 0.6326
+  Test | Time 42 | precision:0.8454 | recall: 0.6862 | f1: 0.7575
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0833 | recall: 0.1250 | f1: 0.1000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.1111 | recall: 0.1364 | f1: 0.1224
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.1667 | recall: 0.0179 | f1: 0.0323
+  Test | Epoch 60 | class 1 | precision:0.5431 | recall: 0.5588 | f1: 0.5508
+Train Epoch 61 | class 1 | precision:0.8574 | recall: 0.9029 | f1: 0.8795
+Eval Epoch 61 | class 1 | precision:0.5549 | recall: 0.8768 | f1: 0.6796
+Train Epoch 62 | class 1 | precision:0.8671 | recall: 0.9012 | f1: 0.8838
+Eval Epoch 62 | class 1 | precision:0.6122 | recall: 0.8444 | f1: 0.7098
+Train Epoch 63 | class 1 | precision:0.8701 | recall: 0.9116 | f1: 0.8904
+Eval Epoch 63 | class 1 | precision:0.6357 | recall: 0.8428 | f1: 0.7247
+Train Epoch 64 | class 1 | precision:0.8828 | recall: 0.9110 | f1: 0.8966
+Eval Epoch 64 | class 1 | precision:0.6279 | recall: 0.8314 | f1: 0.7155
+Train Epoch 65 | class 1 | precision:0.8722 | recall: 0.9083 | f1: 0.8899
+Eval Epoch 65 | class 1 | precision:0.6900 | recall: 0.7504 | f1: 0.7189
+Train Epoch 66 | class 1 | precision:0.8603 | recall: 0.8794 | f1: 0.8697
+Eval Epoch 66 | class 1 | precision:0.4740 | recall: 0.8120 | f1: 0.5986
+Train Epoch 67 | class 1 | precision:0.8399 | recall: 0.8888 | f1: 0.8637
+Eval Epoch 67 | class 1 | precision:0.7100 | recall: 0.7699 | f1: 0.7387
+###################Epoch 67 Test###################
+  Test | Time 37 | precision:0.6800 | recall: 0.4250 | f1: 0.5231
+  Test | Time 38 | precision:0.7339 | recall: 0.7207 | f1: 0.7273
+  Test | Time 39 | precision:0.7231 | recall: 0.5802 | f1: 0.6438
+  Test | Time 40 | precision:0.7333 | recall: 0.3929 | f1: 0.5116
+  Test | Time 41 | precision:0.9091 | recall: 0.4310 | f1: 0.5848
+  Test | Time 42 | precision:0.9462 | recall: 0.5146 | f1: 0.6667
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.1250 | recall: 0.0455 | f1: 0.0667
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 67 | class 1 | precision:0.7510 | recall: 0.4171 | f1: 0.5363
+Train Epoch 68 | class 1 | precision:0.8529 | recall: 0.8632 | f1: 0.8580
+Eval Epoch 68 | class 1 | precision:0.6158 | recall: 0.7455 | f1: 0.6745
+Train Epoch 69 | class 1 | precision:0.7336 | recall: 0.6485 | f1: 0.6884
+Eval Epoch 69 | class 1 | precision:0.6433 | recall: 0.7277 | f1: 0.6829
+Train Epoch 70 | class 1 | precision:0.5792 | recall: 0.6109 | f1: 0.5946
+Eval Epoch 70 | class 1 | precision:0.4200 | recall: 0.7018 | f1: 0.5255
+Train Epoch 71 | class 1 | precision:0.5987 | recall: 0.5820 | f1: 0.5902
+Eval Epoch 71 | class 1 | precision:0.6237 | recall: 0.6580 | f1: 0.6404
+Train Epoch 72 | class 1 | precision:0.6835 | recall: 0.7103 | f1: 0.6967
+Eval Epoch 72 | class 1 | precision:0.4891 | recall: 0.8379 | f1: 0.6177
+Train Epoch 73 | class 1 | precision:0.6677 | recall: 0.8048 | f1: 0.7298
+Eval Epoch 73 | class 1 | precision:0.5268 | recall: 0.8282 | f1: 0.6440
+Train Epoch 74 | class 1 | precision:0.7400 | recall: 0.8216 | f1: 0.7787
+Eval Epoch 74 | class 1 | precision:0.5312 | recall: 0.8412 | f1: 0.6512
+Train Epoch 75 | class 1 | precision:0.7587 | recall: 0.8115 | f1: 0.7842
+Eval Epoch 75 | class 1 | precision:0.5625 | recall: 0.8169 | f1: 0.6662
+Train Epoch 76 | class 1 | precision:0.7528 | recall: 0.8155 | f1: 0.7829
+Eval Epoch 76 | class 1 | precision:0.4800 | recall: 0.8574 | f1: 0.6155
+Train Epoch 77 | class 1 | precision:0.7619 | recall: 0.8138 | f1: 0.7870
+Eval Epoch 77 | class 1 | precision:0.5774 | recall: 0.7861 | f1: 0.6658
+Train Epoch 78 | class 1 | precision:0.7743 | recall: 0.8256 | f1: 0.7992
+Eval Epoch 78 | class 1 | precision:0.5650 | recall: 0.8314 | f1: 0.6728
+Train Epoch 79 | class 1 | precision:0.8238 | recall: 0.8075 | f1: 0.8155
+Eval Epoch 79 | class 1 | precision:0.5469 | recall: 0.8412 | f1: 0.6628
+Train Epoch 80 | class 1 | precision:0.8117 | recall: 0.8172 | f1: 0.8145
+Eval Epoch 80 | class 1 | precision:0.5565 | recall: 0.8379 | f1: 0.6688
+Train Epoch 81 | class 1 | precision:0.8206 | recall: 0.8269 | f1: 0.8238
+Eval Epoch 81 | class 1 | precision:0.5408 | recall: 0.8476 | f1: 0.6604
+Train Epoch 82 | class 1 | precision:0.8329 | recall: 0.8276 | f1: 0.8303
+Eval Epoch 82 | class 1 | precision:0.4832 | recall: 0.8639 | f1: 0.6198
+Train Epoch 83 | class 1 | precision:0.8504 | recall: 0.8192 | f1: 0.8345
+Eval Epoch 83 | class 1 | precision:0.5246 | recall: 0.8460 | f1: 0.6476
+Train Epoch 84 | class 1 | precision:0.8220 | recall: 0.8501 | f1: 0.8358
+Eval Epoch 84 | class 1 | precision:0.4555 | recall: 0.8720 | f1: 0.5984
+Train Epoch 85 | class 1 | precision:0.8475 | recall: 0.8367 | f1: 0.8421
+Eval Epoch 85 | class 1 | precision:0.5372 | recall: 0.8541 | f1: 0.6596
+Train Epoch 86 | class 1 | precision:0.8080 | recall: 0.8656 | f1: 0.8358
+Eval Epoch 86 | class 1 | precision:0.5167 | recall: 0.8752 | f1: 0.6498
+Train Epoch 87 | class 1 | precision:0.8522 | recall: 0.8212 | f1: 0.8364
+Eval Epoch 87 | class 1 | precision:0.5352 | recall: 0.8493 | f1: 0.6566
+Train Epoch 88 | class 1 | precision:0.8191 | recall: 0.8716 | f1: 0.8445
+Eval Epoch 88 | class 1 | precision:0.4252 | recall: 0.8752 | f1: 0.5723
+Train Epoch 89 | class 1 | precision:0.8519 | recall: 0.8468 | f1: 0.8493
+Eval Epoch 89 | class 1 | precision:0.4419 | recall: 0.8622 | f1: 0.5843
+Train Epoch 90 | class 1 | precision:0.8466 | recall: 0.8679 | f1: 0.8571
+Eval Epoch 90 | class 1 | precision:0.4620 | recall: 0.8671 | f1: 0.6028
+Train Epoch 91 | class 1 | precision:0.8532 | recall: 0.8790 | f1: 0.8659
+Eval Epoch 91 | class 1 | precision:0.4938 | recall: 0.8428 | f1: 0.6228
+Train Epoch 92 | class 1 | precision:0.8693 | recall: 0.8562 | f1: 0.8627
+Eval Epoch 92 | class 1 | precision:0.5265 | recall: 0.8363 | f1: 0.6462
+Train Epoch 93 | class 1 | precision:0.8543 | recall: 0.8928 | f1: 0.8732
+Eval Epoch 93 | class 1 | precision:0.5516 | recall: 0.8314 | f1: 0.6632
+Train Epoch 94 | class 1 | precision:0.8582 | recall: 0.8579 | f1: 0.8580
+Eval Epoch 94 | class 1 | precision:0.4995 | recall: 0.8752 | f1: 0.6360
+Train Epoch 95 | class 1 | precision:0.8446 | recall: 0.8952 | f1: 0.8692
+Eval Epoch 95 | class 1 | precision:0.6221 | recall: 0.7844 | f1: 0.6939
+Train Epoch 96 | class 1 | precision:0.8538 | recall: 0.8575 | f1: 0.8557
+Eval Epoch 96 | class 1 | precision:0.5816 | recall: 0.8379 | f1: 0.6866
+Train Epoch 97 | class 1 | precision:0.8360 | recall: 0.8958 | f1: 0.8649
+Eval Epoch 97 | class 1 | precision:0.6248 | recall: 0.7990 | f1: 0.7013
+Train Epoch 98 | class 1 | precision:0.8579 | recall: 0.8706 | f1: 0.8642
+Eval Epoch 98 | class 1 | precision:0.5746 | recall: 0.8428 | f1: 0.6833
+Train Epoch 99 | class 1 | precision:0.8509 | recall: 0.8972 | f1: 0.8734
+Eval Epoch 99 | class 1 | precision:0.5714 | recall: 0.8493 | f1: 0.6832
+Train Epoch 100 | class 1 | precision:0.8313 | recall: 0.8726 | f1: 0.8515
+Eval Epoch 100 | class 1 | precision:0.5300 | recall: 0.8882 | f1: 0.6638
+Train Epoch 101 | class 1 | precision:0.7901 | recall: 0.8804 | f1: 0.8328
+Eval Epoch 101 | class 1 | precision:0.5574 | recall: 0.8817 | f1: 0.6830
+Train Epoch 102 | class 1 | precision:0.8633 | recall: 0.8384 | f1: 0.8507
+Eval Epoch 102 | class 1 | precision:0.5816 | recall: 0.8493 | f1: 0.6904
+Train Epoch 103 | class 1 | precision:0.8372 | recall: 0.8989 | f1: 0.8670
+Eval Epoch 103 | class 1 | precision:0.5296 | recall: 0.8979 | f1: 0.6663
+Train Epoch 104 | class 1 | precision:0.8611 | recall: 0.8935 | f1: 0.8770
+Eval Epoch 104 | class 1 | precision:0.5678 | recall: 0.8622 | f1: 0.6847
+Train Epoch 105 | class 1 | precision:0.8717 | recall: 0.8676 | f1: 0.8697
+Eval Epoch 105 | class 1 | precision:0.5819 | recall: 0.8639 | f1: 0.6954
+Train Epoch 106 | class 1 | precision:0.8803 | recall: 0.8874 | f1: 0.8839
+Eval Epoch 106 | class 1 | precision:0.6055 | recall: 0.8282 | f1: 0.6995
+Train Epoch 107 | class 1 | precision:0.8895 | recall: 0.9036 | f1: 0.8965
+Eval Epoch 107 | class 1 | precision:0.5947 | recall: 0.8703 | f1: 0.7066
+Train Epoch 108 | class 1 | precision:0.8667 | recall: 0.9110 | f1: 0.8883
+Eval Epoch 108 | class 1 | precision:0.5228 | recall: 0.9109 | f1: 0.6643
+Train Epoch 109 | class 1 | precision:0.8605 | recall: 0.8952 | f1: 0.8775
+Eval Epoch 109 | class 1 | precision:0.5639 | recall: 0.8801 | f1: 0.6873
+Train Epoch 110 | class 1 | precision:0.8512 | recall: 0.8821 | f1: 0.8663
+Eval Epoch 110 | class 1 | precision:0.5507 | recall: 0.8801 | f1: 0.6775
+Train Epoch 111 | class 1 | precision:0.8746 | recall: 0.8740 | f1: 0.8743
+Eval Epoch 111 | class 1 | precision:0.6407 | recall: 0.8412 | f1: 0.7274
+Train Epoch 112 | class 1 | precision:0.8854 | recall: 0.9036 | f1: 0.8944
+Eval Epoch 112 | class 1 | precision:0.5841 | recall: 0.8784 | f1: 0.7016
+Train Epoch 113 | class 1 | precision:0.8714 | recall: 0.9110 | f1: 0.8908
+Eval Epoch 113 | class 1 | precision:0.5181 | recall: 0.9044 | f1: 0.6588
+Train Epoch 114 | class 1 | precision:0.8537 | recall: 0.9042 | f1: 0.8783
+Eval Epoch 114 | class 1 | precision:0.5716 | recall: 0.8606 | f1: 0.6869
+Train Epoch 115 | class 1 | precision:0.8503 | recall: 0.8837 | f1: 0.8667
+Eval Epoch 115 | class 1 | precision:0.6528 | recall: 0.8379 | f1: 0.7339
+Train Epoch 116 | class 1 | precision:0.8861 | recall: 0.8814 | f1: 0.8838
+Eval Epoch 116 | class 1 | precision:0.6014 | recall: 0.8655 | f1: 0.7096
+Train Epoch 117 | class 1 | precision:0.8458 | recall: 0.9103 | f1: 0.8768
+Eval Epoch 117 | class 1 | precision:0.5339 | recall: 0.8930 | f1: 0.6683
+Train Epoch 118 | class 1 | precision:0.8378 | recall: 0.8938 | f1: 0.8649
+Eval Epoch 118 | class 1 | precision:0.5736 | recall: 0.8655 | f1: 0.6899
+Train Epoch 119 | class 1 | precision:0.8434 | recall: 0.8340 | f1: 0.8387
+Eval Epoch 119 | class 1 | precision:0.6201 | recall: 0.8493 | f1: 0.7168
+Train Epoch 120 | class 1 | precision:0.8546 | recall: 0.8888 | f1: 0.8714
+Eval Epoch 120 | class 1 | precision:0.5326 | recall: 0.8865 | f1: 0.6655
+Train Epoch 121 | class 1 | precision:0.8597 | recall: 0.9042 | f1: 0.8814
+Eval Epoch 121 | class 1 | precision:0.6163 | recall: 0.8201 | f1: 0.7038
+Train Epoch 122 | class 1 | precision:0.8813 | recall: 0.8928 | f1: 0.8870
+Eval Epoch 122 | class 1 | precision:0.5975 | recall: 0.8444 | f1: 0.6998
+Train Epoch 123 | class 1 | precision:0.8743 | recall: 0.9207 | f1: 0.8969
+Eval Epoch 123 | class 1 | precision:0.5781 | recall: 0.8574 | f1: 0.6906
+Train Epoch 124 | class 1 | precision:0.8831 | recall: 0.9116 | f1: 0.8972
+Eval Epoch 124 | class 1 | precision:0.6120 | recall: 0.8412 | f1: 0.7085
+Train Epoch 125 | class 1 | precision:0.8729 | recall: 0.9089 | f1: 0.8905
+Eval Epoch 125 | class 1 | precision:0.5813 | recall: 0.8574 | f1: 0.6929
+Train Epoch 126 | class 1 | precision:0.8879 | recall: 0.9183 | f1: 0.9029
+Eval Epoch 126 | class 1 | precision:0.6014 | recall: 0.8412 | f1: 0.7014
+Train Epoch 127 | class 1 | precision:0.8843 | recall: 0.9147 | f1: 0.8992
+Eval Epoch 127 | class 1 | precision:0.6025 | recall: 0.8476 | f1: 0.7044
+Train Epoch 128 | class 1 | precision:0.8874 | recall: 0.9194 | f1: 0.9031
+Eval Epoch 128 | class 1 | precision:0.5533 | recall: 0.8914 | f1: 0.6828
+Train Epoch 129 | class 1 | precision:0.8796 | recall: 0.9328 | f1: 0.9054
+Eval Epoch 129 | class 1 | precision:0.5504 | recall: 0.8493 | f1: 0.6679
+Train Epoch 130 | class 1 | precision:0.8723 | recall: 0.9110 | f1: 0.8912
+Eval Epoch 130 | class 1 | precision:0.5537 | recall: 0.8768 | f1: 0.6788
+Train Epoch 131 | class 1 | precision:0.8539 | recall: 0.9210 | f1: 0.8862
+Eval Epoch 131 | class 1 | precision:0.5507 | recall: 0.8444 | f1: 0.6667
+Train Epoch 132 | class 1 | precision:0.8638 | recall: 0.9140 | f1: 0.8882
+Eval Epoch 132 | class 1 | precision:0.5613 | recall: 0.8687 | f1: 0.6819
+Train Epoch 133 | class 1 | precision:0.8662 | recall: 0.9183 | f1: 0.8915
+Eval Epoch 133 | class 1 | precision:0.6252 | recall: 0.8298 | f1: 0.7131
+Train Epoch 134 | class 1 | precision:0.8874 | recall: 0.9106 | f1: 0.8988
+Eval Epoch 134 | class 1 | precision:0.6245 | recall: 0.8331 | f1: 0.7139
+Train Epoch 135 | class 1 | precision:0.8433 | recall: 0.9079 | f1: 0.8744
+Eval Epoch 135 | class 1 | precision:0.6831 | recall: 0.8104 | f1: 0.7413
+###################Epoch 135 Test###################
+  Test | Time 37 | precision:0.4500 | recall: 0.4500 | f1: 0.4500
+  Test | Time 38 | precision:0.4561 | recall: 0.7027 | f1: 0.5532
+  Test | Time 39 | precision:0.5085 | recall: 0.7407 | f1: 0.6030
+  Test | Time 40 | precision:0.5444 | recall: 0.4375 | f1: 0.4851
+  Test | Time 41 | precision:0.4151 | recall: 0.5690 | f1: 0.4800
+  Test | Time 42 | precision:0.7647 | recall: 0.7071 | f1: 0.7348
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0092 | recall: 0.0417 | f1: 0.0150
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.3333 | recall: 0.0833 | f1: 0.1333
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 135 | class 1 | precision:0.4277 | recall: 0.5115 | f1: 0.4659
+Train Epoch 136 | class 1 | precision:0.8847 | recall: 0.9130 | f1: 0.8986
+Eval Epoch 136 | class 1 | precision:0.5910 | recall: 0.8266 | f1: 0.6892
+Train Epoch 137 | class 1 | precision:0.8718 | recall: 0.9136 | f1: 0.8922
+Eval Epoch 137 | class 1 | precision:0.6774 | recall: 0.8201 | f1: 0.7419
+###################Epoch 137 Test###################
+  Test | Time 37 | precision:0.4694 | recall: 0.5750 | f1: 0.5169
+  Test | Time 38 | precision:0.4845 | recall: 0.8468 | f1: 0.6164
+  Test | Time 39 | precision:0.5565 | recall: 0.8519 | f1: 0.6732
+  Test | Time 40 | precision:0.5505 | recall: 0.5357 | f1: 0.5430
+  Test | Time 41 | precision:0.4752 | recall: 0.5776 | f1: 0.5214
+  Test | Time 42 | precision:0.8098 | recall: 0.6946 | f1: 0.7477
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:1.0000 | recall: 0.0556 | f1: 0.1053
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 137 | class 1 | precision:0.4949 | recall: 0.5541 | f1: 0.5228
+Train Epoch 138 | class 1 | precision:0.8684 | recall: 0.9315 | f1: 0.8988
+Eval Epoch 138 | class 1 | precision:0.5818 | recall: 0.8476 | f1: 0.6900
+Train Epoch 139 | class 1 | precision:0.8830 | recall: 0.9026 | f1: 0.8927
+Eval Epoch 139 | class 1 | precision:0.6923 | recall: 0.7731 | f1: 0.7305
+Train Epoch 140 | class 1 | precision:0.8329 | recall: 0.8945 | f1: 0.8626
+Eval Epoch 140 | class 1 | precision:0.7125 | recall: 0.8314 | f1: 0.7674
+###################Epoch 140 Test###################
+  Test | Time 37 | precision:0.5758 | recall: 0.4750 | f1: 0.5205
+  Test | Time 38 | precision:0.5952 | recall: 0.9009 | f1: 0.7168
+  Test | Time 39 | precision:0.5763 | recall: 0.8395 | f1: 0.6834
+  Test | Time 40 | precision:0.5040 | recall: 0.5625 | f1: 0.5316
+  Test | Time 41 | precision:0.5252 | recall: 0.6293 | f1: 0.5725
+  Test | Time 42 | precision:0.8400 | recall: 0.7029 | f1: 0.7654
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:1.0000 | recall: 0.0556 | f1: 0.1053
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 140 | class 1 | precision:0.5295 | recall: 0.5680 | f1: 0.5481
+Train Epoch 141 | class 1 | precision:0.8518 | recall: 0.9254 | f1: 0.8871
+Eval Epoch 141 | class 1 | precision:0.6714 | recall: 0.8509 | f1: 0.7505
+Train Epoch 142 | class 1 | precision:0.8841 | recall: 0.8995 | f1: 0.8917
+Eval Epoch 142 | class 1 | precision:0.7238 | recall: 0.8071 | f1: 0.7632
+Train Epoch 143 | class 1 | precision:0.8467 | recall: 0.9278 | f1: 0.8854
+Eval Epoch 143 | class 1 | precision:0.6971 | recall: 0.7796 | f1: 0.7360
+Train Epoch 144 | class 1 | precision:0.8956 | recall: 0.9335 | f1: 0.9141
+Eval Epoch 144 | class 1 | precision:0.7359 | recall: 0.7812 | f1: 0.7579
+Train Epoch 145 | class 1 | precision:0.8761 | recall: 0.9318 | f1: 0.9031
+Eval Epoch 145 | class 1 | precision:0.7059 | recall: 0.7780 | f1: 0.7402
+Train Epoch 146 | class 1 | precision:0.8932 | recall: 0.9382 | f1: 0.9151
+Eval Epoch 146 | class 1 | precision:0.7011 | recall: 0.7909 | f1: 0.7433
+Train Epoch 147 | class 1 | precision:0.8712 | recall: 0.9362 | f1: 0.9025
+Eval Epoch 147 | class 1 | precision:0.7072 | recall: 0.7828 | f1: 0.7431
+Train Epoch 148 | class 1 | precision:0.8978 | recall: 0.9355 | f1: 0.9162
+Eval Epoch 148 | class 1 | precision:0.7591 | recall: 0.7812 | f1: 0.7700
+###################Epoch 148 Test###################
+  Test | Time 37 | precision:0.5455 | recall: 0.4500 | f1: 0.4932
+  Test | Time 38 | precision:0.5682 | recall: 0.6757 | f1: 0.6173
+  Test | Time 39 | precision:0.6484 | recall: 0.7284 | f1: 0.6860
+  Test | Time 40 | precision:0.5833 | recall: 0.4375 | f1: 0.5000
+  Test | Time 41 | precision:0.5075 | recall: 0.5862 | f1: 0.5440
+  Test | Time 42 | precision:0.8466 | recall: 0.6695 | f1: 0.7477
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 148 | class 1 | precision:0.5645 | recall: 0.4942 | f1: 0.5270
+Train Epoch 149 | class 1 | precision:0.8998 | recall: 0.9472 | f1: 0.9229
+Eval Epoch 149 | class 1 | precision:0.7664 | recall: 0.7763 | f1: 0.7713
+###################Epoch 149 Test###################
+  Test | Time 37 | precision:0.5625 | recall: 0.4500 | f1: 0.5000
+  Test | Time 38 | precision:0.5141 | recall: 0.6577 | f1: 0.5771
+  Test | Time 39 | precision:0.7108 | recall: 0.7284 | f1: 0.7195
+  Test | Time 40 | precision:0.6429 | recall: 0.4018 | f1: 0.4945
+  Test | Time 41 | precision:0.5424 | recall: 0.5517 | f1: 0.5470
+  Test | Time 42 | precision:0.8579 | recall: 0.6569 | f1: 0.7441
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 149 | class 1 | precision:0.6029 | recall: 0.4793 | f1: 0.5340
+Train Epoch 150 | class 1 | precision:0.9101 | recall: 0.9459 | f1: 0.9277
+Eval Epoch 150 | class 1 | precision:0.7950 | recall: 0.7731 | f1: 0.7839
+###################Epoch 150 Test###################
+  Test | Time 37 | precision:0.6296 | recall: 0.4250 | f1: 0.5075
+  Test | Time 38 | precision:0.5714 | recall: 0.6847 | f1: 0.6230
+  Test | Time 39 | precision:0.6854 | recall: 0.7531 | f1: 0.7176
+  Test | Time 40 | precision:0.6522 | recall: 0.4018 | f1: 0.4972
+  Test | Time 41 | precision:0.5417 | recall: 0.5603 | f1: 0.5508
+  Test | Time 42 | precision:0.8935 | recall: 0.6318 | f1: 0.7402
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 150 | class 1 | precision:0.6185 | recall: 0.4781 | f1: 0.5393
+Train Epoch 151 | class 1 | precision:0.9065 | recall: 0.9509 | f1: 0.9282
+Eval Epoch 151 | class 1 | precision:0.7060 | recall: 0.8136 | f1: 0.7560
+Train Epoch 152 | class 1 | precision:0.8834 | recall: 0.9469 | f1: 0.9140
+Eval Epoch 152 | class 1 | precision:0.6408 | recall: 0.8298 | f1: 0.7232
+Train Epoch 153 | class 1 | precision:0.8492 | recall: 0.8894 | f1: 0.8689
+Eval Epoch 153 | class 1 | precision:0.6763 | recall: 0.7958 | f1: 0.7312
+Train Epoch 154 | class 1 | precision:0.8192 | recall: 0.8905 | f1: 0.8533
+Eval Epoch 154 | class 1 | precision:0.6069 | recall: 0.8282 | f1: 0.7005
+Train Epoch 155 | class 1 | precision:0.8497 | recall: 0.8965 | f1: 0.8725
+Eval Epoch 155 | class 1 | precision:0.5738 | recall: 0.8444 | f1: 0.6833
+Train Epoch 156 | class 1 | precision:0.8727 | recall: 0.9099 | f1: 0.8909
+Eval Epoch 156 | class 1 | precision:0.5830 | recall: 0.8541 | f1: 0.6930
+Train Epoch 157 | class 1 | precision:0.8909 | recall: 0.9167 | f1: 0.9036
+Eval Epoch 157 | class 1 | precision:0.6503 | recall: 0.8379 | f1: 0.7323
+Train Epoch 158 | class 1 | precision:0.8922 | recall: 0.9402 | f1: 0.9156
+Eval Epoch 158 | class 1 | precision:0.6990 | recall: 0.8282 | f1: 0.7582
+Train Epoch 159 | class 1 | precision:0.8922 | recall: 0.9177 | f1: 0.9048
+Eval Epoch 159 | class 1 | precision:0.7629 | recall: 0.7925 | f1: 0.7774
+Train Epoch 160 | class 1 | precision:0.8999 | recall: 0.9335 | f1: 0.9164
+Eval Epoch 160 | class 1 | precision:0.7242 | recall: 0.8088 | f1: 0.7642
+Train Epoch 161 | class 1 | precision:0.8945 | recall: 0.9425 | f1: 0.9179
+Eval Epoch 161 | class 1 | precision:0.6617 | recall: 0.8655 | f1: 0.7500
+Train Epoch 162 | class 1 | precision:0.8975 | recall: 0.9351 | f1: 0.9159
+Eval Epoch 162 | class 1 | precision:0.7163 | recall: 0.8428 | f1: 0.7744
+Train Epoch 163 | class 1 | precision:0.8971 | recall: 0.9405 | f1: 0.9183
+Eval Epoch 163 | class 1 | precision:0.7462 | recall: 0.8006 | f1: 0.7725
+Train Epoch 164 | class 1 | precision:0.9110 | recall: 0.9351 | f1: 0.9229
+Eval Epoch 164 | class 1 | precision:0.7568 | recall: 0.8120 | f1: 0.7834
+Train Epoch 165 | class 1 | precision:0.8956 | recall: 0.9422 | f1: 0.9183
+Eval Epoch 165 | class 1 | precision:0.7304 | recall: 0.8298 | f1: 0.7769
+Train Epoch 166 | class 1 | precision:0.9074 | recall: 0.9620 | f1: 0.9339
+Eval Epoch 166 | class 1 | precision:0.7436 | recall: 0.8039 | f1: 0.7726
+Train Epoch 167 | class 1 | precision:0.9129 | recall: 0.9409 | f1: 0.9267
+Eval Epoch 167 | class 1 | precision:0.6985 | recall: 0.8185 | f1: 0.7537
+Train Epoch 168 | class 1 | precision:0.8780 | recall: 0.9456 | f1: 0.9105
+Eval Epoch 168 | class 1 | precision:0.6818 | recall: 0.8298 | f1: 0.7485
+Train Epoch 169 | class 1 | precision:0.8900 | recall: 0.9271 | f1: 0.9082
+Eval Epoch 169 | class 1 | precision:0.7229 | recall: 0.8331 | f1: 0.7741
+Train Epoch 170 | class 1 | precision:0.8145 | recall: 0.8619 | f1: 0.8376
+Eval Epoch 170 | class 1 | precision:0.7956 | recall: 0.7066 | f1: 0.7485
+Train Epoch 171 | class 1 | precision:0.7262 | recall: 0.8165 | f1: 0.7687
+Eval Epoch 171 | class 1 | precision:0.7621 | recall: 0.7374 | f1: 0.7496
+Train Epoch 172 | class 1 | precision:0.7153 | recall: 0.8132 | f1: 0.7611
+Eval Epoch 172 | class 1 | precision:0.3693 | recall: 0.9092 | f1: 0.5253
+Train Epoch 173 | class 1 | precision:0.7723 | recall: 0.8525 | f1: 0.8104
+Eval Epoch 173 | class 1 | precision:0.4527 | recall: 0.8298 | f1: 0.5858
+Train Epoch 174 | class 1 | precision:0.8526 | recall: 0.8239 | f1: 0.8380
+Eval Epoch 174 | class 1 | precision:0.4589 | recall: 0.8606 | f1: 0.5986
+Train Epoch 175 | class 1 | precision:0.7824 | recall: 0.8844 | f1: 0.8303
+Eval Epoch 175 | class 1 | precision:0.4699 | recall: 0.8363 | f1: 0.6017
+Train Epoch 176 | class 1 | precision:0.8596 | recall: 0.8619 | f1: 0.8607
+Eval Epoch 176 | class 1 | precision:0.5108 | recall: 0.8395 | f1: 0.6352
+Train Epoch 177 | class 1 | precision:0.8434 | recall: 0.8992 | f1: 0.8704
+Eval Epoch 177 | class 1 | precision:0.4871 | recall: 0.8282 | f1: 0.6134
+Train Epoch 178 | class 1 | precision:0.8614 | recall: 0.8858 | f1: 0.8734
+Eval Epoch 178 | class 1 | precision:0.6400 | recall: 0.8412 | f1: 0.7269
+Train Epoch 179 | class 1 | precision:0.8328 | recall: 0.9170 | f1: 0.8729
+Eval Epoch 179 | class 1 | precision:0.4939 | recall: 0.8460 | f1: 0.6237
+Train Epoch 180 | class 1 | precision:0.8745 | recall: 0.9036 | f1: 0.8888
+Eval Epoch 180 | class 1 | precision:0.5309 | recall: 0.8363 | f1: 0.6495
+Train Epoch 181 | class 1 | precision:0.8428 | recall: 0.9244 | f1: 0.8817
+Eval Epoch 181 | class 1 | precision:0.5838 | recall: 0.8412 | f1: 0.6892
+Train Epoch 182 | class 1 | precision:0.8656 | recall: 0.9110 | f1: 0.8877
+Eval Epoch 182 | class 1 | precision:0.5852 | recall: 0.8574 | f1: 0.6956
+Train Epoch 183 | class 1 | precision:0.8579 | recall: 0.9214 | f1: 0.8885
+Eval Epoch 183 | class 1 | precision:0.4743 | recall: 0.8979 | f1: 0.6207
+Train Epoch 184 | class 1 | precision:0.8650 | recall: 0.9147 | f1: 0.8891
+Eval Epoch 184 | class 1 | precision:0.5946 | recall: 0.8509 | f1: 0.7000
+Train Epoch 185 | class 1 | precision:0.8884 | recall: 0.9177 | f1: 0.9028
+Eval Epoch 185 | class 1 | precision:0.6486 | recall: 0.8169 | f1: 0.7231
+Train Epoch 186 | class 1 | precision:0.8909 | recall: 0.9251 | f1: 0.9077
+Eval Epoch 186 | class 1 | precision:0.7070 | recall: 0.8055 | f1: 0.7530
+Train Epoch 187 | class 1 | precision:0.8688 | recall: 0.9301 | f1: 0.8984
+Eval Epoch 187 | class 1 | precision:0.7093 | recall: 0.7828 | f1: 0.7442
+Train Epoch 188 | class 1 | precision:0.8812 | recall: 0.9150 | f1: 0.8978
+Eval Epoch 188 | class 1 | precision:0.6538 | recall: 0.8476 | f1: 0.7382
+Train Epoch 189 | class 1 | precision:0.8511 | recall: 0.9123 | f1: 0.8806
+Eval Epoch 189 | class 1 | precision:0.6151 | recall: 0.8314 | f1: 0.7071
+Train Epoch 190 | class 1 | precision:0.7941 | recall: 0.9032 | f1: 0.8452
+Eval Epoch 190 | class 1 | precision:0.6689 | recall: 0.8055 | f1: 0.7309
+Train Epoch 191 | class 1 | precision:0.8467 | recall: 0.8669 | f1: 0.8567
+Eval Epoch 191 | class 1 | precision:0.5973 | recall: 0.8460 | f1: 0.7002
+Train Epoch 192 | class 1 | precision:0.8403 | recall: 0.9086 | f1: 0.8731
+Eval Epoch 192 | class 1 | precision:0.6347 | recall: 0.8590 | f1: 0.7300
+Train Epoch 193 | class 1 | precision:0.8810 | recall: 0.8958 | f1: 0.8884
+Eval Epoch 193 | class 1 | precision:0.6185 | recall: 0.8541 | f1: 0.7175
+Train Epoch 194 | class 1 | precision:0.8676 | recall: 0.9227 | f1: 0.8943
+Eval Epoch 194 | class 1 | precision:0.6271 | recall: 0.8395 | f1: 0.7179
+Train Epoch 195 | class 1 | precision:0.8769 | recall: 0.9123 | f1: 0.8943
+Eval Epoch 195 | class 1 | precision:0.6297 | recall: 0.8655 | f1: 0.7290
+Train Epoch 196 | class 1 | precision:0.8820 | recall: 0.9315 | f1: 0.9060
+Eval Epoch 196 | class 1 | precision:0.5895 | recall: 0.8752 | f1: 0.7045
+Train Epoch 197 | class 1 | precision:0.8987 | recall: 0.9237 | f1: 0.9110
+Eval Epoch 197 | class 1 | precision:0.6023 | recall: 0.8444 | f1: 0.7031
+Train Epoch 198 | class 1 | precision:0.8941 | recall: 0.9338 | f1: 0.9135
+Eval Epoch 198 | class 1 | precision:0.6429 | recall: 0.8314 | f1: 0.7251
+Train Epoch 199 | class 1 | precision:0.8974 | recall: 0.9318 | f1: 0.9143
+Eval Epoch 199 | class 1 | precision:0.6494 | recall: 0.8314 | f1: 0.7292
+Train Epoch 200 | class 1 | precision:0.8950 | recall: 0.9341 | f1: 0.9142
+Eval Epoch 200 | class 1 | precision:0.6524 | recall: 0.8395 | f1: 0.7342
+Train Epoch 201 | class 1 | precision:0.8796 | recall: 0.9452 | f1: 0.9112
+Eval Epoch 201 | class 1 | precision:0.5857 | recall: 0.8088 | f1: 0.6794
+Train Epoch 202 | class 1 | precision:0.9004 | recall: 0.9264 | f1: 0.9132
+Eval Epoch 202 | class 1 | precision:0.6335 | recall: 0.8768 | f1: 0.7356
+Train Epoch 203 | class 1 | precision:0.8513 | recall: 0.9409 | f1: 0.8939
+Eval Epoch 203 | class 1 | precision:0.5989 | recall: 0.8590 | f1: 0.7057
+Train Epoch 204 | class 1 | precision:0.8733 | recall: 0.8891 | f1: 0.8811
+Eval Epoch 204 | class 1 | precision:0.6575 | recall: 0.8152 | f1: 0.7279
+Train Epoch 205 | class 1 | precision:0.8574 | recall: 0.9375 | f1: 0.8957
+Eval Epoch 205 | class 1 | precision:0.6408 | recall: 0.8558 | f1: 0.7328
+Train Epoch 206 | class 1 | precision:0.8858 | recall: 0.9093 | f1: 0.8974
+Eval Epoch 206 | class 1 | precision:0.7411 | recall: 0.8395 | f1: 0.7872
+###################Epoch 206 Test###################
+  Test | Time 37 | precision:0.6154 | recall: 0.6000 | f1: 0.6076
+  Test | Time 38 | precision:0.6597 | recall: 0.8559 | f1: 0.7451
+  Test | Time 39 | precision:0.6569 | recall: 0.8272 | f1: 0.7322
+  Test | Time 40 | precision:0.6988 | recall: 0.5179 | f1: 0.5949
+  Test | Time 41 | precision:0.6727 | recall: 0.6379 | f1: 0.6549
+  Test | Time 42 | precision:0.8730 | recall: 0.6904 | f1: 0.7710
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 206 | class 1 | precision:0.5847 | recall: 0.5565 | f1: 0.5702
+Train Epoch 207 | class 1 | precision:0.8858 | recall: 0.9304 | f1: 0.9076
+Eval Epoch 207 | class 1 | precision:0.6634 | recall: 0.8687 | f1: 0.7523
+Train Epoch 208 | class 1 | precision:0.9052 | recall: 0.9341 | f1: 0.9195
+Eval Epoch 208 | class 1 | precision:0.6620 | recall: 0.8412 | f1: 0.7409
+Train Epoch 209 | class 1 | precision:0.9050 | recall: 0.9472 | f1: 0.9256
+Eval Epoch 209 | class 1 | precision:0.6812 | recall: 0.8379 | f1: 0.7515
+Train Epoch 210 | class 1 | precision:0.9080 | recall: 0.9415 | f1: 0.9244
+Eval Epoch 210 | class 1 | precision:0.6654 | recall: 0.8412 | f1: 0.7430
+Train Epoch 211 | class 1 | precision:0.9182 | recall: 0.9469 | f1: 0.9323
+Eval Epoch 211 | class 1 | precision:0.6821 | recall: 0.8347 | f1: 0.7507
+Train Epoch 212 | class 1 | precision:0.9176 | recall: 0.9546 | f1: 0.9358
+Eval Epoch 212 | class 1 | precision:0.6932 | recall: 0.8314 | f1: 0.7561
+Train Epoch 213 | class 1 | precision:0.9171 | recall: 0.9553 | f1: 0.9358
+Eval Epoch 213 | class 1 | precision:0.6947 | recall: 0.7893 | f1: 0.7390
+Train Epoch 214 | class 1 | precision:0.9057 | recall: 0.9523 | f1: 0.9284
+Eval Epoch 214 | class 1 | precision:0.7107 | recall: 0.8282 | f1: 0.7650
+Train Epoch 215 | class 1 | precision:0.9087 | recall: 0.9496 | f1: 0.9287
+Eval Epoch 215 | class 1 | precision:0.7014 | recall: 0.8412 | f1: 0.7649
+Train Epoch 216 | class 1 | precision:0.8799 | recall: 0.9499 | f1: 0.9136
+Eval Epoch 216 | class 1 | precision:0.6794 | recall: 0.8379 | f1: 0.7504
+Train Epoch 217 | class 1 | precision:0.8907 | recall: 0.9530 | f1: 0.9208
+Eval Epoch 217 | class 1 | precision:0.6068 | recall: 0.9028 | f1: 0.7257
+Train Epoch 218 | class 1 | precision:0.8953 | recall: 0.9284 | f1: 0.9116
+Eval Epoch 218 | class 1 | precision:0.7757 | recall: 0.8185 | f1: 0.7965
+###################Epoch 218 Test###################
+  Test | Time 37 | precision:0.5882 | recall: 0.5000 | f1: 0.5405
+  Test | Time 38 | precision:0.6880 | recall: 0.7748 | f1: 0.7288
+  Test | Time 39 | precision:0.6180 | recall: 0.6790 | f1: 0.6471
+  Test | Time 40 | precision:0.6709 | recall: 0.4732 | f1: 0.5550
+  Test | Time 41 | precision:0.7030 | recall: 0.6121 | f1: 0.6544
+  Test | Time 42 | precision:0.8686 | recall: 0.6360 | f1: 0.7343
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 218 | class 1 | precision:0.6243 | recall: 0.5035 | f1: 0.5574
+Train Epoch 219 | class 1 | precision:0.8639 | recall: 0.9516 | f1: 0.9057
+Eval Epoch 219 | class 1 | precision:0.5897 | recall: 0.8525 | f1: 0.6972
+Train Epoch 220 | class 1 | precision:0.8961 | recall: 0.9190 | f1: 0.9074
+Eval Epoch 220 | class 1 | precision:0.7478 | recall: 0.8412 | f1: 0.7918
+Train Epoch 221 | class 1 | precision:0.8783 | recall: 0.9479 | f1: 0.9118
+Eval Epoch 221 | class 1 | precision:0.6747 | recall: 0.8574 | f1: 0.7552
+Train Epoch 222 | class 1 | precision:0.8893 | recall: 0.9533 | f1: 0.9202
+Eval Epoch 222 | class 1 | precision:0.6088 | recall: 0.8703 | f1: 0.7165
+Train Epoch 223 | class 1 | precision:0.9074 | recall: 0.9419 | f1: 0.9243
+Eval Epoch 223 | class 1 | precision:0.6979 | recall: 0.8687 | f1: 0.7740
+Train Epoch 224 | class 1 | precision:0.8981 | recall: 0.9570 | f1: 0.9266
+Eval Epoch 224 | class 1 | precision:0.6284 | recall: 0.8250 | f1: 0.7134
+Train Epoch 225 | class 1 | precision:0.9135 | recall: 0.9294 | f1: 0.9214
+Eval Epoch 225 | class 1 | precision:0.6776 | recall: 0.8687 | f1: 0.7614
+Train Epoch 226 | class 1 | precision:0.8758 | recall: 0.9577 | f1: 0.9149
+Eval Epoch 226 | class 1 | precision:0.6714 | recall: 0.8347 | f1: 0.7442
+Train Epoch 227 | class 1 | precision:0.9075 | recall: 0.9294 | f1: 0.9183
+Eval Epoch 227 | class 1 | precision:0.6857 | recall: 0.8379 | f1: 0.7542
+Train Epoch 228 | class 1 | precision:0.8535 | recall: 0.9556 | f1: 0.9017
+Eval Epoch 228 | class 1 | precision:0.7247 | recall: 0.8574 | f1: 0.7854
+Train Epoch 229 | class 1 | precision:0.9243 | recall: 0.9227 | f1: 0.9235
+Eval Epoch 229 | class 1 | precision:0.7463 | recall: 0.8201 | f1: 0.7815
+Train Epoch 230 | class 1 | precision:0.8785 | recall: 0.9577 | f1: 0.9164
+Eval Epoch 230 | class 1 | precision:0.7117 | recall: 0.8444 | f1: 0.7724
+Train Epoch 231 | class 1 | precision:0.9171 | recall: 0.9439 | f1: 0.9303
+Eval Epoch 231 | class 1 | precision:0.6722 | recall: 0.8509 | f1: 0.7511
+Train Epoch 232 | class 1 | precision:0.8796 | recall: 0.9651 | f1: 0.9204
+Eval Epoch 232 | class 1 | precision:0.7082 | recall: 0.8379 | f1: 0.7676
+Train Epoch 233 | class 1 | precision:0.8916 | recall: 0.9207 | f1: 0.9059
+Eval Epoch 233 | class 1 | precision:0.7771 | recall: 0.8023 | f1: 0.7895
+Train Epoch 234 | class 1 | precision:0.8664 | recall: 0.9264 | f1: 0.8954
+Eval Epoch 234 | class 1 | precision:0.7546 | recall: 0.8023 | f1: 0.7777
+Train Epoch 235 | class 1 | precision:0.8923 | recall: 0.9382 | f1: 0.9147
+Eval Epoch 235 | class 1 | precision:0.6780 | recall: 0.8395 | f1: 0.7502
+Train Epoch 236 | class 1 | precision:0.8965 | recall: 0.9432 | f1: 0.9193
+Eval Epoch 236 | class 1 | precision:0.6199 | recall: 0.8590 | f1: 0.7201
+Train Epoch 237 | class 1 | precision:0.8920 | recall: 0.9439 | f1: 0.9172
+Eval Epoch 237 | class 1 | precision:0.7622 | recall: 0.8104 | f1: 0.7855
+Train Epoch 238 | class 1 | precision:0.9110 | recall: 0.9385 | f1: 0.9245
+Eval Epoch 238 | class 1 | precision:0.6735 | recall: 0.7990 | f1: 0.7309
+Train Epoch 239 | class 1 | precision:0.8776 | recall: 0.9536 | f1: 0.9140
+Eval Epoch 239 | class 1 | precision:0.6771 | recall: 0.8395 | f1: 0.7496
+Train Epoch 240 | class 1 | precision:0.9123 | recall: 0.9439 | f1: 0.9278
+Eval Epoch 240 | class 1 | precision:0.7214 | recall: 0.8185 | f1: 0.7669
+Train Epoch 241 | class 1 | precision:0.8959 | recall: 0.9634 | f1: 0.9284
+Eval Epoch 241 | class 1 | precision:0.8050 | recall: 0.7828 | f1: 0.7938
+Train Epoch 242 | class 1 | precision:0.9293 | recall: 0.9493 | f1: 0.9392
+Eval Epoch 242 | class 1 | precision:0.7198 | recall: 0.8120 | f1: 0.7631
+Train Epoch 243 | class 1 | precision:0.8951 | recall: 0.9637 | f1: 0.9282
+Eval Epoch 243 | class 1 | precision:0.7581 | recall: 0.7925 | f1: 0.7750
+Train Epoch 244 | class 1 | precision:0.9330 | recall: 0.9446 | f1: 0.9387
+Eval Epoch 244 | class 1 | precision:0.7095 | recall: 0.8233 | f1: 0.7622
+Train Epoch 245 | class 1 | precision:0.8595 | recall: 0.9560 | f1: 0.9052
+Eval Epoch 245 | class 1 | precision:0.6955 | recall: 0.8217 | f1: 0.7533
+Train Epoch 246 | class 1 | precision:0.9179 | recall: 0.9355 | f1: 0.9266
+Eval Epoch 246 | class 1 | precision:0.7372 | recall: 0.7958 | f1: 0.7654
+Train Epoch 247 | class 1 | precision:0.8983 | recall: 0.9677 | f1: 0.9317
+Eval Epoch 247 | class 1 | precision:0.7088 | recall: 0.8088 | f1: 0.7555
+Train Epoch 248 | class 1 | precision:0.9258 | recall: 0.9439 | f1: 0.9348
+Eval Epoch 248 | class 1 | precision:0.7629 | recall: 0.7666 | f1: 0.7648
+Train Epoch 249 | class 1 | precision:0.8885 | recall: 0.9614 | f1: 0.9235
+Eval Epoch 249 | class 1 | precision:0.6919 | recall: 0.8298 | f1: 0.7546
+Train Epoch 250 | class 1 | precision:0.9323 | recall: 0.9583 | f1: 0.9452
+Eval Epoch 250 | class 1 | precision:0.7526 | recall: 0.8136 | f1: 0.7819
+Train Epoch 251 | class 1 | precision:0.9059 | recall: 0.9741 | f1: 0.9388
+Eval Epoch 251 | class 1 | precision:0.7436 | recall: 0.7942 | f1: 0.7680
+Train Epoch 252 | class 1 | precision:0.9267 | recall: 0.9429 | f1: 0.9347
+Eval Epoch 252 | class 1 | precision:0.7206 | recall: 0.8152 | f1: 0.7650
+Train Epoch 253 | class 1 | precision:0.9051 | recall: 0.9708 | f1: 0.9368
+Eval Epoch 253 | class 1 | precision:0.8584 | recall: 0.7763 | f1: 0.8153
+###################Epoch 253 Test###################
+  Test | Time 37 | precision:0.6129 | recall: 0.4750 | f1: 0.5352
+  Test | Time 38 | precision:0.8252 | recall: 0.7658 | f1: 0.7944
+  Test | Time 39 | precision:0.6500 | recall: 0.8025 | f1: 0.7182
+  Test | Time 40 | precision:0.7143 | recall: 0.4464 | f1: 0.5495
+  Test | Time 41 | precision:0.6415 | recall: 0.5862 | f1: 0.6126
+  Test | Time 42 | precision:0.9076 | recall: 0.6987 | f1: 0.7896
+  Test | Time 43 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 44 | precision:0.0185 | recall: 0.0417 | f1: 0.0256
+  Test | Time 45 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 46 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 47 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 48 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Time 49 | precision:0.0000 | recall: 0.0000 | f1: 0.0000
+  Test | Epoch 253 | class 1 | precision:0.5767 | recall: 0.5242 | f1: 0.5492
+Train Epoch 254 | class 1 | precision:0.9307 | recall: 0.9476 | f1: 0.9391
+Eval Epoch 254 | class 1 | precision:0.7788 | recall: 0.7990 | f1: 0.7888
+Train Epoch 255 | class 1 | precision:0.9056 | recall: 0.9603 | f1: 0.9322
+Eval Epoch 255 | class 1 | precision:0.7406 | recall: 0.7958 | f1: 0.7672
+Train Epoch 256 | class 1 | precision:0.9349 | recall: 0.9698 | f1: 0.9520
+Eval Epoch 256 | class 1 | precision:0.7048 | recall: 0.8088 | f1: 0.7532
+Train Epoch 257 | class 1 | precision:0.9285 | recall: 0.9694 | f1: 0.9485
+Eval Epoch 257 | class 1 | precision:0.8233 | recall: 0.7553 | f1: 0.7878
+Train Epoch 258 | class 1 | precision:0.9344 | recall: 0.9469 | f1: 0.9406
+Eval Epoch 258 | class 1 | precision:0.7020 | recall: 0.7828 | f1: 0.7402
+Train Epoch 259 | class 1 | precision:0.8790 | recall: 0.9597 | f1: 0.9176
+Eval Epoch 259 | class 1 | precision:0.7059 | recall: 0.7974 | f1: 0.7489
+Train Epoch 260 | class 1 | precision:0.9047 | recall: 0.9567 | f1: 0.9299
+Eval Epoch 260 | class 1 | precision:0.7920 | recall: 0.7715 | f1: 0.7816
+Train Epoch 261 | class 1 | precision:0.9000 | recall: 0.9647 | f1: 0.9312
+Eval Epoch 261 | class 1 | precision:0.6896 | recall: 0.8136 | f1: 0.7465
+Train Epoch 262 | class 1 | precision:0.9170 | recall: 0.9429 | f1: 0.9298
+Eval Epoch 262 | class 1 | precision:0.8380 | recall: 0.7715 | f1: 0.8034
+Train Epoch 263 | class 1 | precision:0.9016 | recall: 0.9667 | f1: 0.9330
+Eval Epoch 263 | class 1 | precision:0.7980 | recall: 0.7682 | f1: 0.7828
+Train Epoch 264 | class 1 | precision:0.9386 | recall: 0.9546 | f1: 0.9465
+Eval Epoch 264 | class 1 | precision:0.7652 | recall: 0.8136 | f1: 0.7887
+Train Epoch 265 | class 1 | precision:0.9292 | recall: 0.9698 | f1: 0.9490
+Eval Epoch 265 | class 1 | precision:0.7275 | recall: 0.7877 | f1: 0.7564
+Train Epoch 266 | class 1 | precision:0.9403 | recall: 0.9634 | f1: 0.9517
+Eval Epoch 266 | class 1 | precision:0.7990 | recall: 0.7731 | f1: 0.7858
+Train Epoch 267 | class 1 | precision:0.9202 | recall: 0.9724 | f1: 0.9456
+Eval Epoch 267 | class 1 | precision:0.7307 | recall: 0.7958 | f1: 0.7618
+Train Epoch 268 | class 1 | precision:0.9377 | recall: 0.9661 | f1: 0.9517
+Eval Epoch 268 | class 1 | precision:0.7269 | recall: 0.7763 | f1: 0.7508
+Train Epoch 269 | class 1 | precision:0.9343 | recall: 0.9694 | f1: 0.9515
+Eval Epoch 269 | class 1 | precision:0.7695 | recall: 0.7844 | f1: 0.7769
+Train Epoch 270 | class 1 | precision:0.9438 | recall: 0.9657 | f1: 0.9547
+Eval Epoch 270 | class 1 | precision:0.6012 | recall: 0.8379 | f1: 0.7001
+Train Epoch 271 | class 1 | precision:0.9338 | recall: 0.9768 | f1: 0.9548
+Eval Epoch 271 | class 1 | precision:0.7280 | recall: 0.7893 | f1: 0.7574
+Train Epoch 272 | class 1 | precision:0.9446 | recall: 0.9519 | f1: 0.9483
+Eval Epoch 272 | class 1 | precision:0.7660 | recall: 0.7585 | f1: 0.7622
+Train Epoch 273 | class 1 | precision:0.9136 | recall: 0.9772 | f1: 0.9443
+Eval Epoch 273 | class 1 | precision:0.7145 | recall: 0.8071 | f1: 0.7580
+Train Epoch 274 | class 1 | precision:0.9470 | recall: 0.9671 | f1: 0.9569
+Eval Epoch 274 | class 1 | precision:0.6822 | recall: 0.7828 | f1: 0.7291
+Train Epoch 275 | class 1 | precision:0.9201 | recall: 0.9792 | f1: 0.9487
+Eval Epoch 275 | class 1 | precision:0.6989 | recall: 0.8201 | f1: 0.7547
+Train Epoch 276 | class 1 | precision:0.9470 | recall: 0.9664 | f1: 0.9566
+Eval Epoch 276 | class 1 | precision:0.6387 | recall: 0.8023 | f1: 0.7112
+Train Epoch 277 | class 1 | precision:0.9120 | recall: 0.9714 | f1: 0.9408
+Eval Epoch 277 | class 1 | precision:0.7341 | recall: 0.8412 | f1: 0.7840
+Train Epoch 278 | class 1 | precision:0.9331 | recall: 0.9661 | f1: 0.9493
+Eval Epoch 278 | class 1 | precision:0.6796 | recall: 0.8250 | f1: 0.7452
+Train Epoch 279 | class 1 | precision:0.9093 | recall: 0.9597 | f1: 0.9338
+Eval Epoch 279 | class 1 | precision:0.7560 | recall: 0.8136 | f1: 0.7838
+Train Epoch 280 | class 1 | precision:0.9232 | recall: 0.9526 | f1: 0.9377
+Eval Epoch 280 | class 1 | precision:0.7156 | recall: 0.7342 | f1: 0.7248
+Train Epoch 281 | class 1 | precision:0.9077 | recall: 0.9546 | f1: 0.9306
+Eval Epoch 281 | class 1 | precision:0.7434 | recall: 0.7796 | f1: 0.7611
+Train Epoch 282 | class 1 | precision:0.8972 | recall: 0.9556 | f1: 0.9255
+Eval Epoch 282 | class 1 | precision:0.6493 | recall: 0.8460 | f1: 0.7347
+Train Epoch 283 | class 1 | precision:0.9184 | recall: 0.9573 | f1: 0.9375
+Eval Epoch 283 | class 1 | precision:0.7584 | recall: 0.8088 | f1: 0.7827
+Train Epoch 284 | class 1 | precision:0.9028 | recall: 0.9708 | f1: 0.9356
+Eval Epoch 284 | class 1 | precision:0.8033 | recall: 0.8006 | f1: 0.8019
+Train Epoch 285 | class 1 | precision:0.9255 | recall: 0.9345 | f1: 0.9299
+Eval Epoch 285 | class 1 | precision:0.7387 | recall: 0.8201 | f1: 0.7773
+Train Epoch 286 | class 1 | precision:0.9039 | recall: 0.9674 | f1: 0.9346
+Eval Epoch 286 | class 1 | precision:0.7003 | recall: 0.7990 | f1: 0.7464
+Train Epoch 287 | class 1 | precision:0.9479 | recall: 0.9593 | f1: 0.9536
+Eval Epoch 287 | class 1 | precision:0.7211 | recall: 0.7877 | f1: 0.7529
+Train Epoch 288 | class 1 | precision:0.9008 | recall: 0.9735 | f1: 0.9357
+Eval Epoch 288 | class 1 | precision:0.7108 | recall: 0.8606 | f1: 0.7786
+Train Epoch 289 | class 1 | precision:0.9348 | recall: 0.9735 | f1: 0.9537
+Eval Epoch 289 | class 1 | precision:0.6897 | recall: 0.7925 | f1: 0.7376
+Train Epoch 290 | class 1 | precision:0.9386 | recall: 0.9651 | f1: 0.9516
+Eval Epoch 290 | class 1 | precision:0.6857 | recall: 0.8169 | f1: 0.7456
+Train Epoch 291 | class 1 | precision:0.9428 | recall: 0.9812 | f1: 0.9616
+Eval Epoch 291 | class 1 | precision:0.7333 | recall: 0.8201 | f1: 0.7743
+Train Epoch 292 | class 1 | precision:0.9551 | recall: 0.9785 | f1: 0.9666
+Eval Epoch 292 | class 1 | precision:0.7515 | recall: 0.8039 | f1: 0.7768
+Train Epoch 293 | class 1 | precision:0.9481 | recall: 0.9815 | f1: 0.9645
+Eval Epoch 293 | class 1 | precision:0.6948 | recall: 0.8006 | f1: 0.7440
+Train Epoch 294 | class 1 | precision:0.9602 | recall: 0.9805 | f1: 0.9702
+Eval Epoch 294 | class 1 | precision:0.7153 | recall: 0.7942 | f1: 0.7527
+Train Epoch 295 | class 1 | precision:0.9575 | recall: 0.9772 | f1: 0.9672
+Eval Epoch 295 | class 1 | precision:0.7114 | recall: 0.7990 | f1: 0.7527
+Train Epoch 296 | class 1 | precision:0.9413 | recall: 0.9815 | f1: 0.9610
+Eval Epoch 296 | class 1 | precision:0.6766 | recall: 0.8071 | f1: 0.7361
+Train Epoch 297 | class 1 | precision:0.9481 | recall: 0.9751 | f1: 0.9614
+Eval Epoch 297 | class 1 | precision:0.7149 | recall: 0.8169 | f1: 0.7625
+Train Epoch 298 | class 1 | precision:0.9379 | recall: 0.9741 | f1: 0.9557
+Eval Epoch 298 | class 1 | precision:0.6786 | recall: 0.8006 | f1: 0.7346
+Train Epoch 299 | class 1 | precision:0.9448 | recall: 0.9775 | f1: 0.9609
+Eval Epoch 299 | class 1 | precision:0.6862 | recall: 0.8541 | f1: 0.7610
+Train Epoch 300 | class 1 | precision:0.9453 | recall: 0.9805 | f1: 0.9626
+Eval Epoch 300 | class 1 | precision:0.7242 | recall: 0.7958 | f1: 0.7583
+Train Epoch 301 | class 1 | precision:0.9555 | recall: 0.9657 | f1: 0.9606
+Eval Epoch 301 | class 1 | precision:0.7155 | recall: 0.8071 | f1: 0.7586
+Train Epoch 302 | class 1 | precision:0.9171 | recall: 0.9772 | f1: 0.9462
+Eval Epoch 302 | class 1 | precision:0.6956 | recall: 0.8185 | f1: 0.7520
+Train Epoch 303 | class 1 | precision:0.9387 | recall: 0.9567 | f1: 0.9476
+Eval Epoch 303 | class 1 | precision:0.7438 | recall: 0.7812 | f1: 0.7621
+Train Epoch 304 | class 1 | precision:0.9222 | recall: 0.9684 | f1: 0.9448
+Eval Epoch 304 | class 1 | precision:0.7774 | recall: 0.7699 | f1: 0.7736
+Train Epoch 305 | class 1 | precision:0.9413 | recall: 0.9748 | f1: 0.9577
+Eval Epoch 305 | class 1 | precision:0.7615 | recall: 0.7763 | f1: 0.7689
+Train Epoch 306 | class 1 | precision:0.9536 | recall: 0.9735 | f1: 0.9634
+Eval Epoch 306 | class 1 | precision:0.7496 | recall: 0.7472 | f1: 0.7484
+Train Epoch 307 | class 1 | precision:0.9427 | recall: 0.9785 | f1: 0.9603
+Eval Epoch 307 | class 1 | precision:0.6626 | recall: 0.7958 | f1: 0.7231
+Train Epoch 308 | class 1 | precision:0.9432 | recall: 0.9819 | f1: 0.9621
+Eval Epoch 308 | class 1 | precision:0.8072 | recall: 0.7261 | f1: 0.7645
+Train Epoch 309 | class 1 | precision:0.9587 | recall: 0.9748 | f1: 0.9667
+Eval Epoch 309 | class 1 | precision:0.7442 | recall: 0.7780 | f1: 0.7607
+Train Epoch 310 | class 1 | precision:0.9607 | recall: 0.9852 | f1: 0.9728
+Eval Epoch 310 | class 1 | precision:0.8083 | recall: 0.7585 | f1: 0.7826
+Train Epoch 311 | class 1 | precision:0.9477 | recall: 0.9866 | f1: 0.9667
+Eval Epoch 311 | class 1 | precision:0.7233 | recall: 0.7034 | f1: 0.7132
+Train Epoch 312 | class 1 | precision:0.9605 | recall: 0.9731 | f1: 0.9668
+Eval Epoch 312 | class 1 | precision:0.6816 | recall: 0.7877 | f1: 0.7308
+Train Epoch 313 | class 1 | precision:0.9229 | recall: 0.9731 | f1: 0.9473
+Eval Epoch 313 | class 1 | precision:0.7266 | recall: 0.7666 | f1: 0.7461
+Train Epoch 314 | class 1 | precision:0.9294 | recall: 0.9647 | f1: 0.9467
+Eval Epoch 314 | class 1 | precision:0.8389 | recall: 0.7342 | f1: 0.7831
+Train Epoch 315 | class 1 | precision:0.9202 | recall: 0.9603 | f1: 0.9398
+Eval Epoch 315 | class 1 | precision:0.6708 | recall: 0.7861 | f1: 0.7239
+Train Epoch 316 | class 1 | precision:0.9281 | recall: 0.9674 | f1: 0.9474
+Eval Epoch 316 | class 1 | precision:0.6310 | recall: 0.7844 | f1: 0.6994
+Train Epoch 317 | class 1 | precision:0.9467 | recall: 0.9782 | f1: 0.9622
+Eval Epoch 317 | class 1 | precision:0.7149 | recall: 0.7844 | f1: 0.7481
+Train Epoch 318 | class 1 | precision:0.9542 | recall: 0.9812 | f1: 0.9675
+Eval Epoch 318 | class 1 | precision:0.6772 | recall: 0.7618 | f1: 0.7170
+Train Epoch 319 | class 1 | precision:0.9580 | recall: 0.9741 | f1: 0.9660
+Eval Epoch 319 | class 1 | precision:0.7484 | recall: 0.7423 | f1: 0.7453
+Train Epoch 320 | class 1 | precision:0.9476 | recall: 0.9775 | f1: 0.9623
+Eval Epoch 320 | class 1 | precision:0.6923 | recall: 0.7439 | f1: 0.7172
+Train Epoch 321 | class 1 | precision:0.9397 | recall: 0.9590 | f1: 0.9493
+Eval Epoch 321 | class 1 | precision:0.5720 | recall: 0.8817 | f1: 0.6939
+Train Epoch 322 | class 1 | precision:0.7848 | recall: 0.9254 | f1: 0.8493
+Eval Epoch 322 | class 1 | precision:0.5457 | recall: 0.7650 | f1: 0.6370
+Train Epoch 323 | class 1 | precision:0.8130 | recall: 0.9099 | f1: 0.8587
+Eval Epoch 323 | class 1 | precision:0.7678 | recall: 0.8039 | f1: 0.7854
+Train Epoch 324 | class 1 | precision:0.8536 | recall: 0.9267 | f1: 0.8887
+Eval Epoch 324 | class 1 | precision:0.6709 | recall: 0.7634 | f1: 0.7142
+Train Epoch 325 | class 1 | precision:0.8630 | recall: 0.9462 | f1: 0.9027
+Eval Epoch 325 | class 1 | precision:0.6953 | recall: 0.7358 | f1: 0.7150
+Train Epoch 326 | class 1 | precision:0.8967 | recall: 0.9419 | f1: 0.9187
+Eval Epoch 326 | class 1 | precision:0.7331 | recall: 0.7925 | f1: 0.7617
+Train Epoch 327 | class 1 | precision:0.9051 | recall: 0.9553 | f1: 0.9295
+Eval Epoch 327 | class 1 | precision:0.7593 | recall: 0.8233 | f1: 0.7900
+Train Epoch 328 | class 1 | precision:0.9063 | recall: 0.9617 | f1: 0.9332
+Eval Epoch 328 | class 1 | precision:0.6321 | recall: 0.7990 | f1: 0.7058
+Train Epoch 329 | class 1 | precision:0.9131 | recall: 0.9640 | f1: 0.9379
+Eval Epoch 329 | class 1 | precision:0.6189 | recall: 0.8055 | f1: 0.7000
+Train Epoch 330 | class 1 | precision:0.9261 | recall: 0.9597 | f1: 0.9426
+Eval Epoch 330 | class 1 | precision:0.7393 | recall: 0.7812 | f1: 0.7597
+Train Epoch 331 | class 1 | precision:0.9427 | recall: 0.9721 | f1: 0.9572
+Eval Epoch 331 | class 1 | precision:0.6932 | recall: 0.7909 | f1: 0.7388
+Train Epoch 332 | class 1 | precision:0.9486 | recall: 0.9802 | f1: 0.9641
+Eval Epoch 332 | class 1 | precision:0.6750 | recall: 0.8347 | f1: 0.7464
+Train Epoch 333 | class 1 | precision:0.9490 | recall: 0.9808 | f1: 0.9646
+Eval Epoch 333 | class 1 | precision:0.7325 | recall: 0.8298 | f1: 0.7781
+Train Epoch 334 | class 1 | precision:0.9482 | recall: 0.9714 | f1: 0.9597
+Eval Epoch 334 | class 1 | precision:0.6720 | recall: 0.7472 | f1: 0.7076
+Train Epoch 335 | class 1 | precision:0.9508 | recall: 0.9802 | f1: 0.9653
+Eval Epoch 335 | class 1 | precision:0.6979 | recall: 0.7974 | f1: 0.7443
+Train Epoch 336 | class 1 | precision:0.9532 | recall: 0.9718 | f1: 0.9624
+Eval Epoch 336 | class 1 | precision:0.6982 | recall: 0.8136 | f1: 0.7515
+Train Epoch 337 | class 1 | precision:0.9232 | recall: 0.9741 | f1: 0.9480
+Eval Epoch 337 | class 1 | precision:0.7274 | recall: 0.8217 | f1: 0.7717
+Train Epoch 338 | class 1 | precision:0.9189 | recall: 0.9590 | f1: 0.9385
+Eval Epoch 338 | class 1 | precision:0.7177 | recall: 0.8201 | f1: 0.7655
+Train Epoch 339 | class 1 | precision:0.9375 | recall: 0.9775 | f1: 0.9571
+Eval Epoch 339 | class 1 | precision:0.7126 | recall: 0.8039 | f1: 0.7555
+Train Epoch 340 | class 1 | precision:0.9526 | recall: 0.9735 | f1: 0.9629
+Eval Epoch 340 | class 1 | precision:0.6549 | recall: 0.8736 | f1: 0.7486
+Train Epoch 341 | class 1 | precision:0.9348 | recall: 0.9778 | f1: 0.9558
+Eval Epoch 341 | class 1 | precision:0.7099 | recall: 0.7812 | f1: 0.7438
+Train Epoch 342 | class 1 | precision:0.9448 | recall: 0.9546 | f1: 0.9497
+Eval Epoch 342 | class 1 | precision:0.6808 | recall: 0.8088 | f1: 0.7393
+Train Epoch 343 | class 1 | precision:0.9051 | recall: 0.9802 | f1: 0.9411
+Eval Epoch 343 | class 1 | precision:0.6983 | recall: 0.8104 | f1: 0.7502
+Train Epoch 344 | class 1 | precision:0.9493 | recall: 0.9755 | f1: 0.9622
+Eval Epoch 344 | class 1 | precision:0.6878 | recall: 0.8071 | f1: 0.7427
+Train Epoch 345 | class 1 | precision:0.9265 | recall: 0.9825 | f1: 0.9537
+Eval Epoch 345 | class 1 | precision:0.6866 | recall: 0.8558 | f1: 0.7619
+Train Epoch 346 | class 1 | precision:0.9547 | recall: 0.9704 | f1: 0.9625
+Eval Epoch 346 | class 1 | precision:0.7252 | recall: 0.8298 | f1: 0.7740
+Train Epoch 347 | class 1 | precision:0.9158 | recall: 0.9761 | f1: 0.9450
+Eval Epoch 347 | class 1 | precision:0.6131 | recall: 0.8655 | f1: 0.7177
+Train Epoch 348 | class 1 | precision:0.9182 | recall: 0.9580 | f1: 0.9377
+Eval Epoch 348 | class 1 | precision:0.7836 | recall: 0.7277 | f1: 0.7546
+Train Epoch 349 | class 1 | precision:0.9288 | recall: 0.9778 | f1: 0.9527
+Eval Epoch 349 | class 1 | precision:0.7128 | recall: 0.7763 | f1: 0.7432
+Train Epoch 350 | class 1 | precision:0.9443 | recall: 0.9684 | f1: 0.9562
+Eval Epoch 350 | class 1 | precision:0.7008 | recall: 0.7212 | f1: 0.7109
+Train Epoch 351 | class 1 | precision:0.9268 | recall: 0.9785 | f1: 0.9519
+Eval Epoch 351 | class 1 | precision:0.8020 | recall: 0.7877 | f1: 0.7948
+Train Epoch 352 | class 1 | precision:0.9520 | recall: 0.9805 | f1: 0.9661
+Eval Epoch 352 | class 1 | precision:0.7111 | recall: 0.7861 | f1: 0.7467
+Train Epoch 353 | class 1 | precision:0.9624 | recall: 0.9728 | f1: 0.9676
+Eval Epoch 353 | class 1 | precision:0.7173 | recall: 0.7277 | f1: 0.7224
+Best eval Epoch 253, Cur Epoch 353
+Best test f1 is 0.5702479481697083, in Epoch 206
+The Epoch get best Valid measure not get the best Test measure, please checkout the test result in Epoch 253, which f1 is 0.5491852760314941
+train time is: 386.85140336999984
