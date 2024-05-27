@@ -1,8 +1,8 @@
 # [INT3123_20] EvolveGCN Experiments
-Paper: [EvolveGCN](https://arxiv.org/abs/1902.10191)
+Paper: [EvolveGCN](https://arxiv.org/abs/1902.10191)\
 Official code: [IBM/EvolveGCN](https://github.com/IBM/EvolveGCN)
 
-This is the Experiments Reproduction code of EvolveGCN for the course ** INT3123_20 **. 
+This is the Experiments Reproduction code of EvolveGCN for the course **INT3123_20**. 
 Members of our group:
 1. Hoàng Thị Thu Hà - MSV: 21020189
 2. Phạm Ngọc Thạch  - MSV: 21020113
@@ -28,8 +28,8 @@ The Log folder contains the log files where the information about the experiment
 - reddit hyperlink network: Downloadable from http://snap.stanford.edu/data/soc-RedditHyperlinks.html
 - elliptic: A preprocessed version of https://www.kaggle.com/ellipticco/elliptic-data-set
 
-** Note **: The Elliptic dataset is used for Node Classification task, so this dataset is contained in Elliptic folder inside EvolveGCN_DGL. 
-On the other hand, EvolveGCN contains 5 datasets: SBM, BC-OTC, BC-Alpha, Autonomous Systems and Reddit hyperlink network. The dataset UC_irvine is not downloadable anymore. Downloaded data sets are placed in the 'data' folder.
+**Note**: The Elliptic dataset is used for Node Classification task, so this dataset is contained in Elliptic folder inside EvolveGCN_DGL.\ 
+On the other hand, EvolveGCN contains 5 datasets: SBM, BC-OTC, BC-Alpha, Autonomous Systems and Reddit hyperlink network. The dataset UC_irvine is not downloadable anymore. Downloaded data sets are placed in the 'data' folder.\
 Because some datasets are to large, we have compressed them into .rar file.
 
 ## Requirements
@@ -44,7 +44,7 @@ Because some datasets are to large, we have compressed them into .rar file.
 
 
 ## Set up with Docker
-There are clear instructions in the official Github repository for Docker set up to reproduce the experiments: https://github.com/IBM/EvolveGCN
+There are clear instructions in the official Github repository for Docker set up to reproduce the experiments: [EvolveGCN offcial repo](https://github.com/IBM/EvolveGCN)
 
 ## Usage
 
@@ -82,8 +82,8 @@ python train.py --raw-dir EvoveGCN_DGL/Elliptic/elliptic_bitcoin_dataset/ --proc
 
 ## Results
 
-We have reproduced some of the experiments which have the outstanding results presented in Table 2, Figure 3 and Figure 4 in the paper.
-In general, the results we got are closely aligned with the results proposed. For more details, we have meticulously documented the experiments's results in our report.
+We have reproduced some of the experiments which have the outstanding results presented in Table 2, Figure 3 and Figure 4 in the paper.\
+In general, the results we got are closely aligned with the results proposed. For more details, we have meticulously documented the experiments's results in our report.\
 The logs we got are also saved in the log files in Log folder.
 
 
